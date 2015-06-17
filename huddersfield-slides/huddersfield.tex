@@ -4,9 +4,17 @@
 \renewcommand{\mthemetitleformat}{\scshape\MakeLowercase}
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
+\usepackage{cancel}
 \usepgfplotslibrary{dateplot}
 \usepackage{pdfpages}
 \usepackage{graphicx}
+\usepackage{enumitem}
+\setlist[description]{font=\normalfont\itshape}
+\setlist[itemize]{font=\normalfont\itshape\textbullet\space}
+
+\setlength{\arrayrulewidth}{0.2mm}
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.5}
 
 \title{
     Abjad:\protect\\ 
@@ -76,14 +84,43 @@ elemental notation objects.
     \end{itemize}
 \end{frame}
 
-{
-    \setbeamercolor{background canvas}{bg=}
-    \includepdf[angle=180]{stack.pdf}
-}
+%{
+%    \setbeamercolor{background canvas}{bg=}
+%    \includepdf[angle=180]{stack.pdf}
+%}
+
+\begin{frame}{Stack}
+    \begin{table}
+        \caption{Abjad Software Stack}
+        \begin{tabular}{ |c|c|c|c|c| }
+            \hline
+            \multicolumn{5}{|c|}{\textbf{Python}} \\
+            \hline
+            \multicolumn{5}{|c|}{\textbf{Abjad}} \\
+            \hline
+            \xcancel{\textbf{Score}} & \textbf{LilyPond} & \textbf{Steinberg?} & ... & ... \\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{frame}
 
 \section{Score Applications}
 
 \begin{frame}{Josiah's music}
+    \begin{description}
+        \item[2015] \textbf{Invisible Cities (iii): Ersilia} \\
+            for chamber orchestra
+        \item[2015] \textbf{Invisible Cities (ii): Armilla} \\
+            for viola duet
+        \item[2014] \textbf{Invisible Cities (i): Zaira} \\
+            for eight players
+        \item[2014] \textbf{Plague Water} \\
+            for bari sax, e-guitar, piano and percussion
+        \item[2011] \textbf{Aurora} \\
+            for string orchestra
+        \item[2010] \textbf{Lagartija} \\
+            for mixed quartet
+    \end{description}
 \end{frame}
 
 \begin{frame}{Jeff's music}
