@@ -2,11 +2,11 @@
 
 \usetheme{m}
 \renewcommand{\mthemetitleformat}{\scshape\MakeLowercase}
-
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
-
 \usepgfplotslibrary{dateplot}
+\usepackage{pdfpages}
+\usepackage{graphicx}
 
 \title{
     Abjad:\protect\\ 
@@ -75,6 +75,11 @@ elemental notation objects.
         \item Abjad 2.16 released (2015)
     \end{itemize}
 \end{frame}
+
+{
+    \setbeamercolor{background canvas}{bg=}
+    \includepdf[angle=180]{stack.pdf}
+}
 
 \section{Score Applications}
 
