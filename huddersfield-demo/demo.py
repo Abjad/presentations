@@ -3,6 +3,36 @@ from abjad import *
 
 ### PRE ###
 
+
+def make_sketch_lilypond_file(component):
+    for voice in iterate(component).by_class(Voice):
+        voice.remove_commands.append('Forbid_line_break_engraver')
+    override(component).bar_line.stencil = False
+    override(component).bar_number.stencil = False
+    override(component).beam.positions = schemetools.SchemePair(4, 4)
+    override(component).spacing_spanner.strict_grace_spacing = True
+    override(component).spacing_spanner.strict_note_spacing = True
+    override(component).spacing_spanner.uniform_stretching = True
+    override(component).stem.length = 8.25
+    override(component).text_script.outside_staff_padding = 1
+    override(component).time_signature.stencil = False
+    override(component).tuplet_bracket.bracket_visibility = True
+    override(component).tuplet_bracket.minimum_length = 3
+    override(component).tuplet_bracket.outside_staff_padding = 1.5
+    override(component).tuplet_bracket.padding = 1.5
+    override(component).tuplet_bracket.springs_and_rods = \
+        schemetools.Scheme('ly:spanner::set-spacing-rods', verbatim=True)
+    override(component).tuplet_bracket.staff_padding = 2.25
+    override(component).tuplet_number.text = \
+        schemetools.Scheme('tuplet-number::calc-fraction-text', verbatim=True)
+    set_(component).proportional_notation_duration = \
+        schemetools.SchemeMoment(1, 24)
+    set_(component).tuplet_full_length = True
+    lilypond_file = lilypondfiletools.make_basic_lilypond_file(component)
+    lilypond_file.layout_block.indent = 0
+    return lilypond_file
+
+
 def show_demo():
     talea = rhythmmakertools.Talea(
         counts=[1, 2, 3],
@@ -29,31 +59,7 @@ def show_demo():
         staff = Staff([voice], context_name='RhythmicStaff')
         score.append(staff)
         divisions = sequencetools.rotate_sequence(divisions, 1)
-    for voice in iterate(score).by_class(Voice):
-        voice.remove_commands.append('Forbid_line_break_engraver')
-    override(score).bar_line.stencil = False
-    override(score).bar_number.stencil = False
-    override(score).beam.positions = schemetools.SchemePair(4, 4)
-    override(score).spacing_spanner.strict_grace_spacing = True
-    override(score).spacing_spanner.strict_note_spacing = True
-    override(score).spacing_spanner.uniform_stretching = True
-    override(score).stem.length = 8.25
-    override(score).text_script.outside_staff_padding = 1
-    override(score).time_signature.stencil = False
-    override(score).tuplet_bracket.bracket_visibility = True
-    override(score).tuplet_bracket.minimum_length = 3
-    override(score).tuplet_bracket.outside_staff_padding = 1.5
-    override(score).tuplet_bracket.padding = 1.5
-    override(score).tuplet_bracket.springs_and_rods = \
-        schemetools.Scheme('ly:spanner::set-spacing-rods', verbatim=True)
-    override(score).tuplet_bracket.staff_padding = 2.25
-    override(score).tuplet_number.text = \
-        schemetools.Scheme('tuplet-number::calc-fraction-text', verbatim=True)
-    set_(score).proportional_notation_duration = \
-        schemetools.SchemeMoment(1, 24)
-    set_(score).tuplet_full_length = True
-    lilypond_file = lilypondfiletools.make_basic_lilypond_file(score)
-    lilypond_file.layout_block.indent = 0
+    lilypond_file = make_sketch_lilypond_file(score)
     show(lilypond_file)
 
 #show_demo()
@@ -78,18 +84,10 @@ staff = Staff(selections, context_name='RhythmicStaff')
 def make_sketch(rhythm_maker, divisions):
     # rhythmic creation
     selections = rhythm_maker(divisions)
-    # instantiating containers
     voice = Voice(selections)
     staff = Staff([voice], context_name='RhythmicStaff')
     score = Score([staff])
-    lilypond_file = lilypondfiletools.make_basic_lilypond_file(score)
-    # applying typographic overrides
-    voice.remove_commands.append('Forbid_line_break_engraver')
-    override(staff).time_signature.stencil = False
-    override(staff).bar_line.stencil = False
-    override(score).bar_number.stencil = False
-    lilypond_file.layout_block.indent = 0
-    # add proportional overrides
+    lilypond_file = make_sketch_lilypond_file(score)
     return lilypond_file
 
 sketch = make_sketch(note_rhythm_maker, divisions)
@@ -173,33 +171,6 @@ for i in range(12):
     score.append(staff)
     divisions = sequencetools.rotate_sequence(divisions, 1)
 
-for voice in iterate(score).by_class(Voice):
-    voice.remove_commands.append('Forbid_line_break_engraver')
+sketch = make_sketch_lilypond_file(score)
 
-for voice in iterate(score).by_class(Voice):
-    voice.remove_commands.append('Forbid_line_break_engraver')
-override(score).bar_line.stencil = False
-override(score).bar_number.stencil = False
-override(score).beam.positions = schemetools.SchemePair(4, 4)
-override(score).spacing_spanner.strict_grace_spacing = True
-override(score).spacing_spanner.strict_note_spacing = True
-override(score).spacing_spanner.uniform_stretching = True
-override(score).stem.length = 8.25
-override(score).text_script.outside_staff_padding = 1
-override(score).time_signature.stencil = False
-override(score).tuplet_bracket.bracket_visibility = True
-override(score).tuplet_bracket.minimum_length = 3
-override(score).tuplet_bracket.outside_staff_padding = 1.5
-override(score).tuplet_bracket.padding = 1.5
-override(score).tuplet_bracket.springs_and_rods = \
-    schemetools.Scheme('ly:spanner::set-spacing-rods', verbatim=True)
-override(score).tuplet_bracket.staff_padding = 2.25
-override(score).tuplet_number.text = \
-    schemetools.Scheme('tuplet-number::calc-fraction-text', verbatim=True)
-set_(score).proportional_notation_duration = \
-    schemetools.SchemeMoment(1, 24)
-set_(score).tuplet_full_length = True
-lilypond_file = lilypondfiletools.make_basic_lilypond_file(score)
-lilypond_file.layout_block.indent = 0
-
-#show(lilypond_file)
+#show(sketch)
