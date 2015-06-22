@@ -80,15 +80,7 @@ for selection in selections:
 staff = Staff(selections, context_name='RhythmicStaff')
 #show(staff)
 
-
-def make_sketch(rhythm_maker, divisions):
-    # rhythmic creation
-    selections = rhythm_maker(divisions)
-    voice = Voice(selections)
-    staff = Staff([voice], context_name='RhythmicStaff')
-    score = Score([staff])
-    lilypond_file = make_sketch_lilypond_file(score)
-    return lilypond_file
+from presentation import *
 
 sketch = make_sketch(note_rhythm_maker, divisions)
 #show(sketch)
