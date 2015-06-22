@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{An example: rhythmic construction}{4}{0}{1}
+\beamer@sectionintoc {2}{Abjad?}{5}{0}{2}
+\beamer@sectionintoc {3}{Music}{10}{0}{3}
+\beamer@sectionintoc {4}{Companion projects}{15}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{18}{0}{5}

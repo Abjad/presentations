@@ -82,47 +82,42 @@ talea = rhythmmakertools.Talea(
 #for i in range(20):
 #    print(i, talea[i])
 
-### A
+### INITIAL TALEA RHYTHM-MAKER
 
 talea_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(talea=talea)
-selections = talea_rhythm_maker(divisions)
-for selection in selections:
-    selection
+
+divisions  # remind ourselves of original divisions
+
 sketch = make_sketch(talea_rhythm_maker, divisions)
 #show(staff)
 
-### B
+### SPECIFIERS
 
 tie_specifier = rhythmmakertools.TieSpecifier(
     tie_across_divisions=True,
     )
-talea_rhythm_maker = new(
-    talea_rhythm_maker,
-    tie_specifier=tie_specifier,
-    )
-sketch = make_sketch(talea_rhythm_maker, divisions)
-#show(staff)
-
-### C
 
 burnish_specifier = rhythmmakertools.BurnishSpecifier(
-    left_classes=(Rest, Note),
-    left_counts=(1,),
+    left_classes=[Rest],
+    left_counts=[1, 0],
     )
+
+extra_counts_per_division = [0, 1, 1]
+
+### TEMPLATED
+
 talea_rhythm_maker = new(
     talea_rhythm_maker,
     burnish_specifier=burnish_specifier,
+    extra_counts_per_division=extra_counts_per_division,
+    tie_specifier=tie_specifier,
     )
-sketch = make_sketch(talea_rhythm_maker, divisions)
-#show(staff)
 
-### D
+divisions  # remind ourselves of original divisions
 
-talea_rhythm_maker = new(
-    talea_rhythm_maker,
-    extra_counts_per_division=(0, 1, 1),
-    )
 sketch = make_sketch(talea_rhythm_maker, divisions)
+# show(sketch)
+
 
 ### EXAMPLE THREE ###
 
