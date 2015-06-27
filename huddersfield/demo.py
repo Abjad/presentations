@@ -37,6 +37,12 @@ def show_demo():
 #show_demo()
 
 
+### BEGINNING ###
+
+
+from abjad import *
+
+
 ### EXAMPLE ONE ###
 
 
