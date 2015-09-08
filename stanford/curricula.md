@@ -43,13 +43,20 @@ Abjad Bootcamp Overview
     * stylesheets
     * score & parts
 
-* Abjad basics
-    * LCS: leaf, container, spanner
-    * ???
+* Abjad 1: LCS
+    * making notes, rests and chords by hand
+    * making many notes, rests and chords at once
+
+* Abjad 2: 
+    * checking well-formedness
 
 * Tutorials
     * turning numbers into music
     * turning text into music
     * making complex rhythms
     * engraving and inspecting a Bach chorale
-    * adding and removing slurs programmatically
+    * adding and removing slurs and beams programmatically
+    * adding and removing articulations programmatically
+    * multiplying motives and gestures programmatically
+    * transposing music
+    * making selections
