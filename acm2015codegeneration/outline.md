@@ -3,8 +3,12 @@
 ## A canonical description of Abjad formatting
 
 Traverse and collect.
+
 As we collect, there are rules determining what is collected.
+
 From where do the rules derive? Western Notation and LilyPond.
+
+Code generation and domain-specific knowledge govern the collection system at traversal-time.
 
 - Input is a score tree - an Abjad data structure.
 - Output is a string in a subset of LilyPond syntax.
@@ -31,3 +35,5 @@ From where do the rules derive? Western Notation and LilyPond.
   - Non-spanner attachments hold no references: flyweights.
 - `LilyPondFormatManager` visits each node in the formatted subtree.
 - The format bundle is encapsulated in a class.
+
+## Discrepancies
