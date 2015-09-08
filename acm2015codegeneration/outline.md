@@ -10,6 +10,8 @@ From where do the rules derive? Western Notation and LilyPond.
 
 Code generation and domain-specific knowledge govern the collection system at traversal-time.
 
+Traversal is not informed by music notation, but the collection rules are and the resulting lexical ordering of format contributions is.
+
 - Input is a score tree - an Abjad data structure.
 - Output is a string in a subset of LilyPond syntax.
 - Formatting involves mapping the input into the output.
@@ -37,3 +39,5 @@ Code generation and domain-specific knowledge govern the collection system at tr
 - The format bundle is encapsulated in a class.
 
 ## Discrepancies
+
+Abjad uses a tree model, while LilyPond uses both a tree and an event-stream model.
