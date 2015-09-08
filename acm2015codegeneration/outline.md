@@ -2,10 +2,9 @@
 
 ## A canonical description of Abjad formatting
 
-Input is a score tree - an Abjad data structure.
-Output is a text file in a subset of LilyPond syntax.
-Formatting involves mapping the input into the output.
-
+- Input is a score tree - an Abjad data structure.
+- Output is a string in a subset of LilyPond syntax.
+- Formatting involves mapping the input into the output.
 - We perform a depth-first traversal of the score tree
 - At each node in the tree, collect its contributions into a bundle
 - Contributions are strings, or string-generators
