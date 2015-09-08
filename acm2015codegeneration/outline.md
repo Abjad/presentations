@@ -50,7 +50,18 @@ Music notation prioritizes structure. The unique constraint of music notation re
 
 Perhaps Abjad formatting is a kind of serialization? We serialize according to sequence in time. This is not an event stream, like MIDI. This is motivated by nesting.
 
+Abjad sets up a correspondence between the temporal events in music and graph theoretic tree structure.
+
+The tree sets up the start and stop times of objects in the score.
+
+The lexical positioning of format contributions allows the syntax to locate the arbitrary objects of Western notation relative to the start and stop times of nodes in the tree.
+
+Secondary objects (spanners and attachments) located relative to manditorally-durated primary objects (leaves and containers).
+
 ## Discrepancies
 
 Abjad uses a tree model, while LilyPond uses both a tree and an event-stream model.
 
+Abjad formatted scores make use of a constrained subset of syntax.
+
+Attachment vs stream events.
