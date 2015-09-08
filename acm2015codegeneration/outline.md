@@ -1,5 +1,9 @@
 # Outline
 
+## Regarding LilyPond syntax
+
+
+
 ## A canonical description of Abjad formatting
 
 Traverse and collect.
@@ -26,7 +30,7 @@ Traversal is not informed by music notation, but the collection rules are and th
 - Continue until all nodes have been visited.
 - A single string results.
 
-## Items of note
+## Items of note / Desiderata
 
 - The process is a kind of object-oriented delegation.
 - Very similar to the visitor pattern.
@@ -38,6 +42,15 @@ Traversal is not informed by music notation, but the collection rules are and th
 - `LilyPondFormatManager` visits each node in the formatted subtree.
 - The format bundle is encapsulated in a class.
 
+LilyPond code is designed to be human-readable.
+
+Abjad's output is deterministic and performs no compaction or optimization.
+
+Music notation prioritizes structure. The unique constraint of music notation requires that the structure of temporarally successive or simultaneous elements be maximally clear and preserves that structure and renders it manifest.
+
+Perhaps Abjad formatting is a kind of serialization? We serialize according to sequence in time. This is not an event stream, like MIDI. This is motivated by nesting.
+
 ## Discrepancies
 
 Abjad uses a tree model, while LilyPond uses both a tree and an event-stream model.
+
