@@ -43,12 +43,18 @@ Abjad Bootcamp Overview
     * stylesheets
     * score & parts
 
-* Abjad 1: LCS
+* Abjad 1: creation
     * making notes, rests and chords by hand
     * making many notes, rests and chords at once
 
-* Abjad 2: 
-    * checking well-formedness
+* Abjad 2: interrogation
+    * inspection
+    * iteration
+    * checking well-formedness & other diagnostics
+
+* Abjad 3: mutation
+    * making selections
+    * copying objects
 
 * Tutorials
     * turning numbers into music
