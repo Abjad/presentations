@@ -46,6 +46,7 @@ Abjad Bootcamp Overview
 * Abjad 1: creation
     * making notes, rests and chords by hand
     * making many notes, rests and chords at once
+    * adding and removing slurs and beams by hand
 
 * Abjad 2: interrogation
     * inspection
@@ -55,6 +56,13 @@ Abjad Bootcamp Overview
 * Abjad 3: mutation
     * making selections
     * copying objects
+    * transposing music
+
+* Abjad 4: project structure
+    * ???
+
+* Abjad 5: document preparation
+    * ???
 
 * Tutorials
     * turning numbers into music
@@ -64,5 +72,4 @@ Abjad Bootcamp Overview
     * adding and removing slurs and beams programmatically
     * adding and removing articulations programmatically
     * multiplying motives and gestures programmatically
-    * transposing music
-    * making selections
+    * implementing custom spanners
