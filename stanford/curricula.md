@@ -119,6 +119,19 @@ Abjad bootcamp: curricular modules
     * score preface
     * managing the build directory
 
+* LaTeX 1: basics
+    * downloading and installing
+    * hello, world!
+    * document headers
+    * inputting text
+    * formatting text
+    * bonus: working with tables
+
+* LaTeX 2: textual documents containing music
+    * making music examples
+    * embedding music examples
+    * captions and figure positioning
+
 * Tutorials
     * turning numbers into music: random numbers and statistical distributions
     * turning text into music: Roman, Greek and Han characters
