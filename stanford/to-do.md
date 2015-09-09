@@ -1,12 +1,12 @@
 Abjad bootcamp to-do
 ====================
 
-* Figure out which operating systems we will use (or admit) in the classroom
+* Figure out which operating systems we will teach in the class:
     * OSX: yes
-    * Linux: ?
+    * Linux: yes
     * Windows: ?
-* If we admit Windows then we will need to reauthor and **TEST** all of the
-    operating-system specific modules ahead of time. Currently these are:
+* If we teach Windows then we will need to reauthor and **TEST** all of the
+    operating-system specific modules:
     * Operating system basics
     * Repository basics
-    * Writing and running automated tests 
+    * Automated testing basics
