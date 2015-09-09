@@ -1,32 +1,70 @@
-Abjad Bootcamp Overview
-=======================
+Abjad bootcamp: curricular modules
+==================================
 
-* Operating system basics
-    * working with a text editor
-    * editing your profile
-    * setting and clearing environment variables
+* Unix 1
+    * selecting a text editor
+    * what is a shell?
+    * managing with your profile
+    * working with environment variables
 
-* Unix basics
-    * moving around
-    * listing directories
-    * creating, copying and removing files
+* Unix 2
+    * moving around: cd, pwd
+    * listing directories: ls
+    * managing files: cp, mv, rm
+    * getting information: time, ps
+    * getting help: man
 
-* Python 1: basics
-    * numbers, strings, lists, sets and dictionaries
-    * conditionals, loops & other flow control
-    * defining classes
-    * making classes
-    * writing and running tests
+* Unix 3
+    * searching text: grep
+    * finding files: find
+    * regular expression basics
 
-* Python 2: modules and imports
-    * imports
+* Unix 4
+    * managing permissions: sudo
+    * making files executable: chmod
+
+* Python 1: programming basics
+    * starting and stopping the interpreter
+    * math: numbers, arithmetic operations
+    * iterables: strings, lists, sets, dictionaries
+    * flow control: conditionals, loops, comprehensions
+    * encapsulation: functions, classes
+    * coding standards: PEP8, AjCS
+    * getting help
+
+* Python 2: working with text
+    * string operations in depth
+    * working with foreign characters
+    * reading and writing files
+    * bonus: the 're' regular expression module
+
+* Python 3: classes in depth
+    * classes and instances
+    * writing simple classes
+    * overriding __init__
+    * overriding special methods
+    * private functionality
+    * public functionality
+    * writing and running doctests
+
+* Python 4: modules and imports
     * making your own modules 
-    * learning the standard library
+    * the import statement
+    * making modules executable with __main__
 
-* Python 3: structuring projects
-    * canonical score structure
-    * automated tests
-    * using a repository
+* Python 5: exploring the standard library
+    * copy
+    * os
+    * math
+    * pytest
+    * time
+    * types
+
+* Python 6: external resources
+    * what is PyPI?
+    * what is GitHub?
+    * what is Travis-CI?
+    * what is Sphinx?
 
 * LilyPond 1:
     * downloading and getting started
@@ -58,18 +96,38 @@ Abjad Bootcamp Overview
     * copying objects
     * transposing music
 
-* Abjad 4: project structure
-    * ???
+* Abjad 4: working with larger scores
+    * generating a lot of music
+    * monitoring execution time
+    * dividing scores into segments
+    * concatenating score segments
+    * working with stylesheets
+    * extracting parts
 
-* Abjad 5: document preparation
-    * ???
+* Abjad 5: project structure
+    * installable Python packages
+    * the score-package-repository (1:1:1) pattern
+    * creating a score package
+    * structuring the score directory
+    * creating material packages
+    * creating segment packages
+    * building the score
+
+* Abjad 6: document preparation
+    * LaTeX basics
+    * score covers
+    * score preface
+    * managing the build directory
 
 * Tutorials
-    * turning numbers into music
-    * turning text into music
+    * turning numbers into music: random numbers and statistical distributions
+    * turning text into music: Roman, Greek and Han characters
     * making complex rhythms
     * engraving and inspecting a Bach chorale
     * adding and removing slurs and beams programmatically
     * adding and removing articulations programmatically
     * multiplying motives and gestures programmatically
     * implementing custom spanners
+    * working with classical twelve-tone operations: transposition, inversion,
+        retrogression
+    * working with the Xenakis sieves
