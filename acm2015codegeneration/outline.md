@@ -1,9 +1,8 @@
 # Outline
 
 ## Possible Titles
-Generating LilyPond Syntax via Python to Create Music Notation Documents
+Generating LilyPond Code via Python to Create Music Notation Documents
 
-Design Challenges for Code Generation in Music Notation Applications
 
 
 ## Regarding LilyPond syntax
@@ -71,3 +70,6 @@ Abjad uses a tree model, while LilyPond uses both a tree and an event-stream mod
 Abjad formatted scores make use of a constrained subset of syntax.
 
 Attachment vs stream events.
+
+##paper conclusion: Design Challenges for Code Generation in Music Notation Applications
+Hey! We can generalize stuff!
