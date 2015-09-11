@@ -1,7 +1,7 @@
 # Outline
 
 ## Possible Titles
-Generating LilyPond Code via Python to Create Music Notation Documents
+Generating LilyPond Code in Python via Abjad to Create Music Notation Documents
 
 ##Abstract (not more than 500 words)
 LilyPond is a modular, extensible, programmable music notation document compiler that converts text input into automatically formatted graphic output. The Abjad API for Formalized Score Control -- which extends the Python programming language with an open-source, object-oriented model of common-practice music notation that enables users to build music notation documents through the aggregation of elemental music notation objects -- generates well-formed LilyPond input syntax. Abjad models hierarchically organized music information as a reference-rich, normalized tree. In order to model musical-typographical constructs such as slurs, beams and ties, Abjad introduces cyclicity into its core tree data structure via bidirectionally referenced, subtree-spanning nodes. Abjad traverses this data structure to collect formatting information from each encountered node, and a hybrid set of rules derived from graph theory, western music notation, and the constraints of LilyPond's domain-specific language enables Abjad to organize this collected information into a LilyPond input string.
