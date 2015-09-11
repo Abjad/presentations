@@ -1,5 +1,8 @@
 # Outline
 
+Generating LilyPond Syntax via Python to Create Music Notation Documents
+
+
 ## Regarding LilyPond syntax
 
 
