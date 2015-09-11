@@ -2,6 +2,7 @@
 
 ## Possible Titles
 Generating LilyPond Syntax via Python to Create Music Notation Documents
+Design Challenges for Code Generation in Music Notation Applications
 
 
 ## Regarding LilyPond syntax
