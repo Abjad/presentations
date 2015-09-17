@@ -61,7 +61,7 @@ keyword1, keyword2
 
 The text of the paper begins here.
 
-\section{LilyPond syntax and data model}
+\subsection{LilyPond syntax and data model}
 Lilypond compiles music documents via two distinct module. First, a module parses the input
 file, and then a module formats the music for tyesetting. The compiler translates the parsed text input into an event stream representation before formatting to streamline music typesetting process.\cite{sandberg2006separating}
 
@@ -71,22 +71,26 @@ Lilypond's context hierarchy. Lilypond models music notation as a hierarchy of c
 
 Lilypond is an interpreted language. It's stateful.
 
-\section{Abjad data model}
-While Lilypond implies containers and spanners through the interaction of the text input and event stream representations, Abjad models containers and spanners explicitly. For convenience, Abjad defaults to treating LilyPond's property changes (overrides, reverts, set, unset -- context-settings) as post-events that apply to the event which they immediately succeed; in this regard, they become syntactically equivalent to leaves (Notes, Rests, and Chords). While they aren't part of a note.
+\subsection{Abjad data model}
+While Lilypond implies containers and spanners through the interaction of the text input and event stream representations, Abjad models containers and spanners explicitly. For convenience, Abjad defaults to treating LilyPond's property changes (overrides, reverts, set, unset -- context-settings) as post-events that apply to the event which they immediately succeed; in this regard, they become syntactically equivalent to leaves (Notes, Rests, and Chords). While they aren't part of a note. (We should have clarified discrepancies between the two models by the end of this section.)
 
-\section{Abjad's Input-Output}
+\section{LilyPond Document Generation}
 
-\section{Document Management}
+\subsection{Parsing LilyPond syntax in Abjad}
 
-\section{Traversal, collection and organization}
+\subsection{Traversal, collection and organization}
 
 \subsection{Abjad's format manager}
 
 \subsection{Format bundles and lexical organization of format contributions}
 
-\section{Discrepancies between Abjad and LilyPond}
+\section{Document Management Utilities}
 
-\subsection{Parsing LilyPond syntax in Abjad}
+\subsection{Abjad's Input-Output}
+
+\subsection{LilyPond Source Concatenation}
+
+\subsection{\latex and Sphinx Integration for System Documentation}
 
 \section{Conclusion}
 
