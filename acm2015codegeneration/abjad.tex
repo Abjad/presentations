@@ -65,7 +65,14 @@ The text of the paper begins here.
 Lilypond compiles music documents via two distinct module. First, a module parses the input
 file, and then a module formats the music for tyesetting. The compiler translates the parsed text input into an event stream representation before formatting to streamline music typesetting process.\cite{sandberg2006separating}
 
+Lilypond requires grammar rules that are shaped in a certain rules (certain commands can be in certain locations with greater or lesser degrees of flexibility). Pitch name, followed by the octave tick (or lack thereof), and the duration.
+
+Lilypond's context hierarchy. Lilypond models music notation as a hierarchy of contexts, each of which is a collection of engravers, modules that handle specific typographical tasks. Lilypond's modular engraver design entails that well-formed element grammar commands apply to specific contexts and not to other.
+
+Lilypond is an interpreted language. It's stateful.
+
 \section{Abjad data model}
+While Lilypond implies containers and spanners through the interaction of the text input and event stream representations, Abjad models containers and spanners explicitly.
 
 \section{Traversal, collection and organization}
 
