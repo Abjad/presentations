@@ -2,7 +2,6 @@
 
 \usetheme{m}
 \renewcommand{\mthemetitleformat}{\scshape\MakeLowercase}
-\usepackage{verbatim}
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
 \usepackage{cancel}
@@ -11,6 +10,8 @@
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
 \usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
 \setlist[description]{font=\normalfont\itshape}
 \setlist[itemize]{font=\normalfont\itshape\textbullet\space}
 
@@ -24,13 +25,13 @@
 }
 \subtitle{}
 \author{
-    Josiah Wolf Oberholtzer \inst{1} \and 
+    Josiah Wolf Oberholtzer \inst{1} \and
 }
 \institute[shortinst]{
     \inst{1}Department of Music, Harvard University
 }
 \date[]{
-    PDX Python\protect\\ 
+    PDX Python\protect\\
     (Thursday 22 October 2015)
 }
 
@@ -53,13 +54,35 @@ elemental notation objects.
 
 \section{Abjad? Some background}
 
+\begin{frame}{A}
+
+- Who am I? Who else works on Abjad
+
+- History of formalized score control
+
+    - Xenakis, Ferneyhough, Boulez, friends
+
+    - IRCAM
+
+    - OpenMusic, PWGL, OpusModus
+
+    - Other contenders: SC, Bach
+
+- History of Abjad
+
+- Why Python?
+
+- We seriously do stuff with this
+
+\end{frame}
+
 \section{Usage and object model}
 
-\section{Documenting Abjad with Sphinx, LaTeX \& IPython}
+\section{Abjad, Sphinx, LaTeX \& IPython}
 
-\section{Python 2, 3 \& PyPy compatibility (Thank you Travis-CI!)}
+\section{Python 2, 3 \& PyPy compatibility}
 
-\section{Complex musical document creation}
+\section{Musical document creation}
 
 \begin{comment}
 
@@ -77,7 +100,7 @@ elemental notation objects.
         \item Python into LilyPond (2005)
         \item Max/MSP into MS Access into Adobe Illustrator (2008)\footnote{
             An attempt by Josiah before discovering Abjad.
-            } 
+            }
         \item Public release on GoogleCode (2008)
         \item Migration to GitHub (2011)
         \item Abjad 2.16 released (2015)
@@ -198,15 +221,15 @@ Inspection, iteration, selection, mutation, persistence
 
 \begin{frame}{Jeff's music}
     \begin{description}
-        \item[2015] \textbf{On the Behavior of Climbing Plants} \\ 
+        \item[2015] \textbf{On the Behavior of Climbing Plants} \\
             for chamber orchestra
-        \item[2013] \textbf{The World All Around} \\ 
+        \item[2013] \textbf{The World All Around} \\
             for Eb clarinet, prepared piano, and harp
-        \item[2013] \textbf{+/-} \\ 
+        \item[2013] \textbf{+/-} \\
             for twenty french horns
-        \item[2013] \textbf{Enfilade, Moses All, and Future Calendars} \\ 
+        \item[2013] \textbf{Enfilade, Moses All, and Future Calendars} \\
             for carillon
-        \item[2011] \textbf{Being Pollen} \\ 
+        \item[2011] \textbf{Being Pollen} \\
             for solo percussion
     \end{description}
 \end{frame}
@@ -240,7 +263,7 @@ completion, and rich history.
 \end{quote}
 
 IPython integration was spearheaded by \textbf{Prof. George K. Thiruvathukal}
-(\emph{http://thiruvathukal.com}), Loyola University Chicago. 
+(\emph{http://thiruvathukal.com}), Loyola University Chicago.
 \end{frame}
 
 \begin{frame}{SASHA}
