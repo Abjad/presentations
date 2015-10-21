@@ -12,6 +12,9 @@ clean:
 	find . -name "*.out" -exec rm -rf {} \;
 	find . -name "*.pyc" -exec rm -rf {} \;
 	find . -name "*.toc" -exec rm -rf {} \;
+	find . -name "*.nav" -exec rm -rf {} \;
+	find . -name "*.snm" -exec rm -rf {} \;
+	find . -name "*.vrb" -exec rm -rf {} \;
 
 book:
 	ajv book \
