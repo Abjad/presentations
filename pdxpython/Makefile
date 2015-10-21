@@ -1,7 +1,7 @@
 TEX = abjad.tex
 PDF = abjad.pdf
-IPY = abjad-ipython-demo.ipynb
-MP3 = abjad.mp3
+IPY = demos/ipython/abjad-ipython-demo.ipynb
+MP3 = demos/audio/abjad.mp3
 
 clean:
 	find . -name "*.aux" -exec rm -rf {} \;
