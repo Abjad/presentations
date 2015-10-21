@@ -37,6 +37,15 @@
     xleftmargin=-6pt,
 }
 
+\newenvironment{markdown}{
+    \VerbatimEnvironment
+    \begin{VerbatimOut}{tmp/tmp.markdown}%
+}{
+    \end{VerbatimOut}
+    \immediate\write18{pandoc tmp/tmp.markdown -t latex -o tmp/tmp.tex}
+    \input{tmp/tmp.tex}
+}
+
 \setlist[description]{font=\normalfont\itshape}
 \setlist[itemize]{font=\normalfont\itshape\textbullet\space}
 
@@ -79,45 +88,38 @@ elemental notation objects.
 
 \section{Abjad? Some background}
 
-\begin{frame}{}
-
+\begin{frame}[fragile]{TITLE}
+\begin{markdown}
 - Who am I? Who else works on Abjad
-
 - History of Abjad
-
 - Why Python?
-
 - We seriously do stuff with this
-
+\end{markdown}
 \end{frame}
 
-\begin{frame}{Historical Background}
+\begin{frame}[fragile]{TITLE}
 
+\begin{markdown}
 - History of formalized score control
-
     - Xenakis, Ferneyhough, Boulez, friends
-
     - IRCAM
-
     - OpenMusic, PWGL, OpusModus
-
     - Other contenders: SC, Bach
+\end{markdown}
 
 \end{frame}
 
-\begin{frame}{}
-
+\begin{frame}[fragile]{TITLE}
+\begin{markdown}
 - In the symbolic domain
-
 - Concerned with typesetting
-
 - No floating point, no audio
-
+\end{markdown}
 \end{frame}
 
 \section{Usage and object model}
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]{Importing Abjad}
 
 \begin{comment}
 <abjad>
@@ -170,7 +172,7 @@ dir()
 
 \end{frame}
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]{Hello World!}
 
 \begin{comment}
 <abjad>

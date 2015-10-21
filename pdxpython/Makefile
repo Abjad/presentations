@@ -13,19 +13,25 @@ clean:
 	find . -name "*.pyc" -exec rm -rf {} \;
 	find . -name "*.toc" -exec rm -rf {} \;
 
-slides:
+book:
 	ajv book \
 		-a ./assets \
 		-g ./abjadbook.cfg \
 		-l . \
 		-y ./stylesheet.ily \
 		abjad.tex
+
+latex:
 	xelatex \
 		-shell-escape \
 		$(TEX)
 	xelatex \
 		-shell-escape \
 		$(TEX)
+
+slides:
+	make book
+	make latex
 	make clean
 	open $(PDF)
 
