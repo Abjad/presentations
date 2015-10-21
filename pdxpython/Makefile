@@ -14,8 +14,18 @@ clean:
 	find . -name "*.toc" -exec rm -rf {} \;
 
 slides:
-	xelatex $(TEX)
-	xelatex $(TEX)
+	ajv book \
+		-a ./assets \
+		-g ./abjadbook.cfg \
+		-l . \
+		-y ./stylesheet.ily \
+		abjad.tex
+	xelatex \
+		-shell-escape \
+		$(TEX)
+	xelatex \
+		-shell-escape \
+		$(TEX)
 	make clean
 	open $(PDF)
 

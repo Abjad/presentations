@@ -10,8 +10,33 @@
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
 \usepackage{enumitem}
-\usepackage{verbatim}
 \usepackage{fancyvrb}
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{minted}
+
+\newenvironment{abjadbookoutput}{}{}
+
+\setmonofont[
+    %BoldFeatures={FakeBold=3},
+    %BoldFont=Inconsolata,
+    %BoldItalicFeatures={FakeBold=3},
+    %BoldItalicFont=Inconsolata,
+    %ItalicFont=Inconsolata,
+    Scale=MatchLowercase
+]{Inconsolata}
+
+\setminted{
+    autogobble=true,
+    fontsize=\footnotesize,
+    frame=leftline,
+    framerule=1.5pt,
+    framesep=6pt,
+    obeytabs=true,
+    tabsize=4,
+    xleftmargin=-6pt,
+}
+
 \setlist[description]{font=\normalfont\itshape}
 \setlist[itemize]{font=\normalfont\itshape\textbullet\space}
 
@@ -54,9 +79,19 @@ elemental notation objects.
 
 \section{Abjad? Some background}
 
-\begin{frame}{A}
+\begin{frame}{}
 
 - Who am I? Who else works on Abjad
+
+- History of Abjad
+
+- Why Python?
+
+- We seriously do stuff with this
+
+\end{frame}
+
+\begin{frame}{Historical Background}
 
 - History of formalized score control
 
@@ -68,15 +103,110 @@ elemental notation objects.
 
     - Other contenders: SC, Bach
 
-- History of Abjad
+\end{frame}
 
-- Why Python?
+\begin{frame}{}
 
-- We seriously do stuff with this
+- In the symbolic domain
+
+- Concerned with typesetting
+
+- No floating point, no audio
 
 \end{frame}
 
 \section{Usage and object model}
+
+\begin{frame}[fragile]
+
+\begin{comment}
+<abjad>
+from abjad import *
+</abjad>
+\end{comment}
+
+\begin{abjadbookoutput}
+\begin{singlespacing}
+\vspace{-0.5\baselineskip}
+\begin{minted}{pycon}
+>>> from abjad import *
+\end{minted}
+\end{singlespacing}
+\end{abjadbookoutput}
+
+\begin{comment}
+<abjad>[text_width=80]
+dir()
+</abjad>
+\end{comment}
+
+\begin{abjadbookoutput}
+\begin{singlespacing}
+\vspace{-0.5\baselineskip}
+\begin{minted}{pycon}
+>>> dir()
+['Accelerando', 'Articulation', 'Beam', 'Chord', 'Clef', 'Container', 'Context',
+'Crescendo', 'Decrescendo', 'Duration', 'Dynamic', 'Fermata', 'Fraction',
+'Glissando', 'Hairpin', 'KeySignature', 'Markup', 'Measure', 'MultimeasureRest',
+'Multiplier', 'NamedPitch', 'Note', 'Offset', 'Rest', 'Ritardando', 'Score',
+'Sequence', 'Skip', 'Slur', 'Staff', 'StaffGroup', 'Tempo', 'Tie',
+'TimeSignature', 'Timespan', 'Tuplet', 'Voice', '__builtins__', '__cached__',
+'__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__',
+'__spec__', '__version__', '__version_info__', 'abctools',
+'abjad_configuration', 'agenttools', 'attach', 'datastructuretools', 'demos',
+'detach', 'developerscripttools', 'documentationtools', 'durationtools',
+'exceptiontools', 'ext', 'f', 'graph', 'handlertools', 'indicatortools',
+'inspect_', 'instrumenttools', 'ipythontools', 'iterate', 'labeltools',
+'layouttools', 'lilypondfiletools', 'lilypondnametools', 'lilypondparsertools',
+'ly', 'markuptools', 'mathtools', 'metertools', 'mutate', 'new', 'override',
+'parse', 'persist', 'pitchtools', 'play', 'print_function', 'quantizationtools',
+'rhythmmakertools', 'rhythmtreetools', 'schemetools', 'scoretools', 'select',
+'selectiontools', 'selectortools', 'sequencetools', 'set_', 'show',
+'sievetools', 'spannertools', 'stringtools', 'systemtools', 'templatetools',
+'timespantools', 'tonalanalysistools', 'topleveltools']
+\end{minted}
+\end{singlespacing}
+\end{abjadbookoutput}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{comment}
+<abjad>
+note = Note("c'4")
+show(note)
+</abjad>
+\end{comment}
+
+\begin{abjadbookoutput}
+\begin{singlespacing}
+\vspace{-0.5\baselineskip}
+\begin{minted}{pycon}
+>>> note = Note("c'4")
+>>> show(note)
+\end{minted}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-c018a545d264ff34225e9a3a5babb6c1.pdf}
+\end{singlespacing}
+\end{abjadbookoutput}
+
+\begin{comment}
+<abjad>
+print(format(note))
+</abjad>
+\end{comment}
+
+\begin{abjadbookoutput}
+\begin{singlespacing}
+\vspace{-0.5\baselineskip}
+\begin{minted}{pycon}
+>>> print(format(note))
+c'4
+\end{minted}
+\end{singlespacing}
+\end{abjadbookoutput}
+
+\end{frame}
 
 \section{Abjad, Sphinx, LaTeX \& IPython}
 
@@ -313,6 +443,7 @@ http://groups.google.com/group/abjad-user
 \end{frame}
 
 \begin{frame}{TENOR 2015 (github.com/Abjad/tenor2015)}
+
     \begin{tabular}{cc}
     \includegraphics[
         page=1,
