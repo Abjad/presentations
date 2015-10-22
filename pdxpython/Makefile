@@ -16,7 +16,6 @@ clean:
 	find . -name "*.snm" -exec rm -rf {} \;
 	find . -name "*.vrb" -exec rm -rf {} \;
 	rm -Rif _minted-abjad/
-	rm -Rif tmp/
 
 book:
 	ajv book \
@@ -24,7 +23,7 @@ book:
 		-g ./abjadbook.cfg \
 		-l . \
 		-y ./stylesheet.ily \
-		abjad.tex
+		abjad.tex source/*.tex
 
 latex:
 	xelatex \
@@ -38,6 +37,9 @@ slides:
 	make book
 	make latex
 	make clean
+	make open
+
+open:
 	open $(PDF)
 
 ipython:
