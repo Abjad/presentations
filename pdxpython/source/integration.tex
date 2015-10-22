@@ -1,5 +1,9 @@
 \section{Integration}
 
+\begin{frame}
+Documentation drives Abjad's development
+\end{frame}
+
 \begin{frame}[fragile]{Integrating with other tools}
     \begin{block}{LaTeX}
         Preprocessing LaTeX input files
@@ -13,4 +17,20 @@
     \begin{block}{Graphviz}
         Object-oriented toolkit for constructing Graphviz graphs
     \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Key techniques}
+How to embed graphics into a document?
+
+\begin{block}{Use a \emph{sand-boxed} interpreter within your actual interpreter}
+Python's \texttt{code} module
+\end{block}
+
+\begin{block}{Monkey-patch all output functions}
+Replace \texttt{print()} and also \texttt{show()} inside your sandbox
+\end{block}
+
+\begin{block}{Capture objects to be rendered and save them for later}
+Use an intermediate format for multiple potential outputs
+\end{block}
 \end{frame}
