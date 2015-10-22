@@ -15,6 +15,8 @@ clean:
 	find . -name "*.nav" -exec rm -rf {} \;
 	find . -name "*.snm" -exec rm -rf {} \;
 	find . -name "*.vrb" -exec rm -rf {} \;
+	rm -Rif _minted-abjad/
+	rm -Rif tmp/
 
 book:
 	ajv book \
