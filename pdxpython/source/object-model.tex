@@ -19,15 +19,6 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{Containers, leaves \& spanners}
-    \begin{figure}
-    \begin{centering}
-        \includegraphics[height=2.5in]{assets/include-container-spanner.png}
-    \caption{Spanners introducing cyclicity}
-    \end{centering}
-    \end{figure}
-\end{frame}
-
 \begin{frame}[fragile]{Parsers}
 \begin{markdown}
 - PLY-powered
@@ -37,6 +28,48 @@
 - IRCAM-inspired RTM-parsing
 - *Reduced-LilyPond*-parsing for pedagogical examples
 \end{markdown}
+\end{frame}
+
+\begin{frame}[fragile]{Top-level functions}
+    \begin{block}{show(), play() and graph()}
+        \emph{Illustratable} visualization or sonification
+    \end{block}
+    \begin{block}{attach(), detach()}
+        Indicator and spanner attachment
+    \end{block}
+    \begin{block}{inspect\_()}
+        Reveals inspection interface,\\
+        Accesses score-context-derived info\\
+        (How much work should properties do?)
+    \end{block}
+    \begin{block}{iterate()}
+        Reveals interation interface
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Top-level functions}
+    \begin{block}{mutate()}
+        Reveals mutation interface
+    \end{block}
+    \begin{block}{override(), set\_()}
+        Override and set LilyPond typographic overrides
+    \end{block}
+    \begin{block}{persist()}
+        Reveals persistence interface,\\
+        Exports objects as PNG, PDF, LilyPond, MIDI, etc.
+    \end{block}
+    \begin{block}{new()}
+        \emph{Storage-formattable} object templating
+    \end{block}
+\end{frame}
+
+\begin{frame}{Containers, leaves \& spanners}
+    \begin{figure}
+    \begin{centering}
+        \includegraphics[height=2.5in]{assets/include-container-spanner.png}
+    \caption{Spanners introducing cyclicity}
+    \end{centering}
+    \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{A two voice example}
@@ -74,39 +107,6 @@ show(score)
 
 \end{frame}
 
-\begin{frame}[fragile]{Top-level functions}
-    \begin{block}{show(), play() and graph()}
-        \emph{Illustratable} visualization or sonification
-    \end{block}
-    \begin{block}{attach(), detach()}
-        Indicator and spanner attachment
-    \end{block}
-    \begin{block}{inspect\_()}
-        Reveals inspection interface,\\
-        Accesses score-context-derived info\\
-        (How much work should properties do?)
-    \end{block}
-    \begin{block}{iterate()}
-        Reveals interation interface
-    \end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Top-level functions}
-    \begin{block}{mutate()}
-        Reveals mutation interface
-    \end{block}
-    \begin{block}{override(), set\_()}
-        Override and set LilyPond typographic overrides
-    \end{block}
-    \begin{block}{persist()}
-        Reveals persistence interface,\\
-        Exports objects as PNG, PDF, LilyPond, MIDI, etc.
-    \end{block}
-    \begin{block}{new()}
-        \emph{Storage-formattable} object templating
-    \end{block}
-\end{frame}
-
 \begin{frame}[fragile]{Showing, playing, graphing components}
 \begin{comment}
 <abjad>
@@ -139,7 +139,7 @@ graph(score)
 \begin{minted}{pycon}
 >>> graph(score)
 \end{minted}
-\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-e2c3abddd31202013f11968c9bff5808.pdf}
+\noindent\includegraphics[scale=0.4,max width=\textwidth,]{assets/graphviz-689ec46b64db8bb23aecc1c9990caba5.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -350,6 +350,32 @@ show(score)
 \end{frame}
 
 \begin{frame}[fragile]{Markup}
+\begin{comment}
+<abjad>
+city = Markup('Los Angeles').bold()
+date = Markup('May - August 2014').italic()
+markup = Markup.center_column([city, date])
+markup = markup.pad_around(1)
+markup = markup.box()
+show(markup)
+</abjad>
+\end{comment}
+
+\begin{abjadbookoutput}
+\begin{singlespacing}
+\vspace{-0.5\baselineskip}
+\begin{minted}{pycon}
+>>> city = Markup('Los Angeles').bold()
+>>> date = Markup('May - August 2014').italic()
+>>> markup = Markup.center_column([city, date])
+>>> markup = markup.pad_around(1)
+>>> markup = markup.box()
+>>> show(markup)
+\end{minted}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-8563f330fdfc46fa302925a0197dbcb5.pdf}
+\end{singlespacing}
+\end{abjadbookoutput}
+
 \end{frame}
 
 \begin{frame}[fragile]{Generative component selectors}
@@ -388,8 +414,10 @@ show(upper_staff)
 \begin{frame}[fragile]{Typographic overrides}
 \begin{comment}
 <abjad>
-override(score['Lower Staff']).note_head.style = 'slash'
-override(score['Lower Staff']).staff_symbol.line_positions = schemetools.SchemePair(-4, 4)
+staff = score['Lower Staff']
+attach(Clef('percussion'), staff)
+override(staff).note_head.style = 'cross'
+override(staff).staff_symbol.line_positions = schemetools.SchemeVector(-4, 4)
 show(score)
 </abjad>
 \end{comment}
@@ -398,11 +426,13 @@ show(score)
 \begin{singlespacing}
 \vspace{-0.5\baselineskip}
 \begin{minted}{pycon}
->>> override(score['Lower Staff']).note_head.style = 'slash'
->>> override(score['Lower Staff']).staff_symbol.line_positions = schemetools.SchemePair(-4, 4)
+>>> staff = score['Lower Staff']
+>>> attach(Clef('percussion'), staff)
+>>> override(staff).note_head.style = 'cross'
+>>> override(staff).staff_symbol.line_positions = schemetools.SchemeVector(-4, 4)
 >>> show(score)
 \end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-4fd5d30f6d67e7dc95e18808899f5ad9.pdf}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-5b7ae10d9fb4a5038821f2f69bee511d.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
@@ -416,8 +446,9 @@ show(staff)
 shards = mutate(staff.select_leaves()).split([(5, 16)], cyclic=True)
 for i, shard in enumerate(shards):
     if i % 2:
-        mutate(shard).transpose('+M3')
+        mutate(shard).transpose('+P8')
     attach(Slur(), shard)
+    attach(Articulation('accent'), shard[0])
 
 show(staff)
 </abjad>
@@ -435,21 +466,40 @@ show(staff)
 >>> shards = mutate(staff.select_leaves()).split([(5, 16)], cyclic=True)
 >>> for i, shard in enumerate(shards):
 ...     if i % 2:
-...         mutate(shard).transpose('+M3')
+...         mutate(shard).transpose('+P8')
 ...     attach(Slur(), shard)
+...     attach(Articulation('accent'), shard[0])
 ...
 >>> show(staff)
 \end{minted}
-\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-d1d1b132557a6e06aabb2a560d1d258e.pdf}
+\noindent\includegraphics[max width=\textwidth,]{assets/lilypond-308d96c8c430b7d576cef9dcb097b743.pdf}
 \end{singlespacing}
 \end{abjadbookoutput}
 
 \end{frame}
 
+\begin{comment}
 \begin{frame}[fragile]{Object Persistence}
 Text
 \end{frame}
-
 \begin{frame}[fragile]{Object templating}
 Text
+\end{frame}
+\end{comment}
+
+\begin{frame}[fragile]{About the code base}
+\begin{markdown}
+- targeted at printed music, not audio
+- no floating point anywhere - it's all rational numbers
+- aims for explicitness in its design
+- few dependencies
+- 496 public classes
+- 387 public functions
+- 186,963 lines of code
+- 9399 unit tests
+- 10190 documentation tests
+- 100\% free \& open source
+- platform independent
+- runs under both Python 2.7, 3.3+ and PyPy
+\end{markdown}
 \end{frame}
