@@ -58,9 +58,11 @@ Abjad bootcamp: schedule
 
 * Friday: document structure (publication and more on project layout)
     * 10:00 - 10:30 am: demo #5
-    * 10:30 am - noon: covers, preface, guts & other document parts
+    * 10:30 am - noon:
+        * covers, preface, music
+        * part extraction
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: whirlwind introducing to latex
+    * 1 - 2:30 pm: whirlwind introduction to latex
     * 2:30 - 3 pm: snack I
     * 3 - 4:30 pm: PDF finalization techniques
     * 4:30  - 5 pm: snack II
@@ -71,5 +73,5 @@ Abjad bootcamp: schedule
 
 * Note: talk to Sév about guest appearance
 * Note: talk amongst ourselves about parametric score layout tutorials
-* Note: workshop repository on GitHub:
-    * goal is to expose users to GitHub without forcing use
+* Note: workshop repository on GitHub with goal to expose users to GitHub 
+    without forcing use
