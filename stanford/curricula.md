@@ -144,3 +144,6 @@ Abjad bootcamp: curricular modules
     * working with classical twelve-tone operations: transposition, inversion,
         retrogression
     * working with the Xenakis sieves
+    * chopping rhythms into measures
+    * midi output (preferably nice sounding)
+    * audio analysis to create harmonies
