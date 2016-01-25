@@ -2,17 +2,21 @@ Abjad bootcamp: schedule
 ========================
 
 * Monday
-    * 10:00 - 10:30 am: demo #1
-    * 10:30 - noon: installation workshop:
-        * Python
-        * LilyPond
-        * Abjad
+    * 9 am - 10 am: introduction (who we are play some music)
+    * 10 am - 10:30 am: LilyPond installation workshop
+    * 10:30 - noon: LilyPond overview
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: Overview of Python (all examples musical)
+    * 1 - 2:30 pm: Abjad installation workshop
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: Making notes, rests, chords by hand one at a time
+    * 3 - 4:30 pm: Notes, rests, chords and lots of them
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: Making lots of notes, rests, chords at once
+    * 5 - 6 pm: Backing up and taking stock:
+        * bulleted list of Abjad use cases
+        * chart of chords
+        * experiment with patterns in nature
+        * vary compositional motifs
+        * engrave parametric scores
+        * etc
 
 * Tuesday
     * 10:00 - 10:30 am: demo #2
@@ -53,3 +57,6 @@ Abjad bootcamp: schedule
     * 3 - 4:30 pm: (instruction block 3)
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: (instruction block 4)
+
+* Note: talk to Sév about guest appearance
+* Note: talk amongst ourselves about parametric score layout tutorials
