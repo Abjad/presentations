@@ -20,7 +20,7 @@ Abjad bootcamp: schedule
 
 * Tuesday
     * 10:00 - 10:30 am: demo #2
-    * 10:30 am - noon: LilyPond Bach chorales
+    * 10:30 am - noon: Engraving a Bach chorale in LilyPond
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: Abjad containers: voices, staves, staff groups, score
     * 2:30 - 3 pm: snack I
@@ -33,23 +33,25 @@ Abjad bootcamp: schedule
 
 * Wednesday
     * 10:00 - 10:30 am: demo #3
-    * 10:30 am - noon: (instruction block 1)
+    * 10:30 am - noon: Engraving parametric cello music in LilyPond
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: (instruction block 2)
+    * 1 - 2:30 pm: Parametric tutorial workshop 1: project layout
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: (instruction block 3)
+    * 3 - 4:30 pm: Parametric tutorial workshop 2: typographic overrides
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: (instruction block 4)
+    * 5 - 6 pm: Going further:
+        * in-class performance from Sév (?)
 
-* Thursday
+* Thursday: moving towards makers
     * 10:00 - 10:30 am: demo #4
-    * 10:30 am - noon: (instruction block 1)
+    * 10:30 am - noon: Exposing / introducing segment-makers
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: (instruction block 2)
+    * 1 - 2:30 pm: Exposing / introducing rhythm-makers
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: (instruction block 3)
+    * 3 - 4:30 pm: Complex rhythms by hand
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: (instruction block 4)
+    * 5 - 6 pm: Going further:
+        * Introduction to making your own makers
 
 * Friday
     * 10:00 - 10:30 am: demo #5
@@ -63,3 +65,5 @@ Abjad bootcamp: schedule
 
 * Note: talk to Sév about guest appearance
 * Note: talk amongst ourselves about parametric score layout tutorials
+* Note: workshop repository on GitHub:
+    * goal is to expose users to GitHub without forcing use
