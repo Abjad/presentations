@@ -8,11 +8,11 @@ Abjad bootcamp: schedule
         * LilyPond
         * Abjad
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: (instruction block 2)
+    * 1 - 2:30 pm: Overview of Python (all examples musical)
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: (instruction block 3)
+    * 3 - 4:30 pm: Making notes, rests, chords by hand one at a time
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: (instruction block 4)
+    * 5 - 6 pm: Making lots of notes, rests, chords at once
 
 * Tuesday
     * 10:00 - 10:30 am: demo #2
