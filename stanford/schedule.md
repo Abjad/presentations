@@ -72,6 +72,8 @@ Abjad bootcamp: schedule
         * introducting continous integration testing
 
 * Note: talk to Sév about guest appearance
+
 * Note: talk amongst ourselves about parametric score layout tutorials
+
 * Note: workshop repository on GitHub with goal to expose users to GitHub 
     without forcing use
