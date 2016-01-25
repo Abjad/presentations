@@ -10,7 +10,7 @@ Abjad bootcamp: schedule
     * 2:30 - 3 pm: snack I
     * 3 - 4:30 pm: Notes, rests, chords and lots of them
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: Backing up and taking stock:
+    * 5 - 6 pm: Going further:
         * bulleted list of Abjad use cases
         * chart of chords
         * experiment with patterns in nature
@@ -20,13 +20,16 @@ Abjad bootcamp: schedule
 
 * Tuesday
     * 10:00 - 10:30 am: demo #2
-    * 10:30 am - noon: (instruction block 1)
+    * 10:30 am - noon: LilyPond Bach chorales
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: (instruction block 2)
+    * 1 - 2:30 pm: Abjad containers: voices, staves, staff groups, score
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: (instruction block 3)
+    * 3 - 4:30 pm: Score structure: solos, duos, quartets, orchestra
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: (instruction block 4)
+    * 5 - 6 pm: Going further:
+        * creating score templates in LilyPond
+        * creating score templates in Abjad 
+        * towards parametric score layout
 
 * Wednesday
     * 10:00 - 10:30 am: demo #3
