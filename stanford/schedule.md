@@ -8,9 +8,9 @@ Abjad bootcamp: schedule
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: Abjad installation workshop
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: Notes, rests, chords and lots of them
+    * 3 - 4:30 pm: notes, rests, chords and lots of them
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: Going further:
+    * 5 - 6 pm: going further:
         * bulleted list of Abjad use cases
         * chart of chords
         * experiment with patterns in nature
@@ -27,22 +27,22 @@ Abjad bootcamp: schedule
         * indexing and slicing
         * rewriting meter
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: Score structure: solos, duos, quartets, orchestra
+    * 3 - 4:30 pm: score structure: solos, duos, quartets, orchestra
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: Going further:
+    * 5 - 6 pm: going further:
         * creating score templates in LilyPond
         * creating score templates in Abjad 
         * towards parametric score layout
 
 * Wednesday: reproducing a (beautiful & complex) realworld score
     * 10:00 - 10:30 am: demo #3
-    * 10:30 am - noon: Engraving parametric cello music in LilyPond
+    * 10:30 am - noon: engraving parametric cello music in LilyPond
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: Parametric tutorial workshop 1: project layout
+    * 1 - 2:30 pm: parametric tutorial workshop 1: project layout
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: Parametric tutorial workshop 2: typographic overrides
+    * 3 - 4:30 pm: parametric tutorial workshop 2: typographic overrides
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: Going further:
+    * 5 - 6 pm: going further:
         * in-class performance from Sév (?)
 
 * Thursday: moving towards makers (or, the joys of encapsulation)
@@ -53,7 +53,7 @@ Abjad bootcamp: schedule
     * 2:30 - 3 pm: snack I
     * 3 - 4:30 pm: complex rhythms by hand
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: Going further:
+    * 5 - 6 pm: going further:
         * introduction to making your own makers
 
 * Friday: document structure (publication and more on project layout)
@@ -62,7 +62,7 @@ Abjad bootcamp: schedule
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: whirlwind introducing to latex
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: PDF finalization techqniues
+    * 3 - 4:30 pm: PDF finalization techniques
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going futher:
         * collaborating with other composers
