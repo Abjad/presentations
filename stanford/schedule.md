@@ -14,18 +14,20 @@ Abjad bootcamp: schedule
         * introducing pip
         * introducing git clone
         * introducing virtualenv (?)
+        * hello world: show(note)
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: making notes, rests, chords (and lots of them) in Abjad
+    * 3 - 4:30 pm: making notes, rests, chords (lots of them) in Abjad [Jeff]
+        * hello world: show(note)
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
-        * bulleted list of Abjad use cases
-        * chart of chords
-        * experiment with patterns in nature
-        * vary compositional motifs
-        * engrave parametric scores
+        * bulleted list of Abjad use cases [???]
+        * chart of chords [???]
+        * experiment with patterns in nature [???]
+        * vary compositional motifs [???]
+        * engrave parametric scores [???]
 
 * Tuesday: structuring scores
-    * 10:00 - 10:30 am: demo #2 [TBD]
+    * 10:00 - 10:30 am: demo #2: Pärt [Jeff+Josiah]
     * 10:30 am - noon: Engraving a Bach chorale in LilyPond [Jeff]
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: rhythms and rhythm-makers [Jeff]
@@ -40,14 +42,10 @@ Abjad bootcamp: schedule
         * introducing selection, inspection, mutation
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
-        * towards complex score layout
-            * creating score templates in LilyPond
-                * two-staff thing with custom context names for a cello piece
-            * creating score templates in Abjad 
-        * introduction to making your own makers [Trevor]
+        * teasers for Wednesday [Trevor]
 
 * Wednesday: reproducing a (beautiful & complex) realworld score
-    * 10:00 - 10:30 am: demo #3 [TBD]
+    * 10:00 - 10:30 am: demo #3 [???]
     * 10:30 am - noon: engraving complex cello music in LilyPond [Trevor]
         * grobs, contexts, context settings
         * three waves of work for attendees:
@@ -64,7 +62,7 @@ Abjad bootcamp: schedule
         * Traiettorie inargentate [Séverine]
 
 * Thursday: Abjad score package structure
-    * 10:00 - 10:30 am: demo #4 [TBD]
+    * 10:00 - 10:30 am: demo #4 [???]
     * 10:30 am - noon: introducing Abjad score package structure [Josiah]
         * understanding Abajd score package structure (talk thru directories)
         * understanding LilyPond stylesheets
@@ -77,7 +75,7 @@ Abjad bootcamp: schedule
     * 5 - 6 pm: going further: [???]
 
 * Friday: document structure (publication and more on project layout)
-    * 10:00 - 10:30 am: demo #5 [TBD]
+    * 10:00 - 10:30 am: demo #5 [???]
     * 10:30 am - noon:
         * part extraction [Josiah]
         * segment collection [Josiah]
