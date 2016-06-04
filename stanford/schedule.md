@@ -49,27 +49,28 @@ Abjad bootcamp: schedule
     * 10:00 - 10:30 am: demo #4
     * 10:30 am - noon: exposing / introducing segment-makers
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: exposing / introducing rhythm-makers
+    * 1 - 2:30 pm: complex rhythms bottom-up in Abjad [Jeff]
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: complex rhythms by hand
+    * 3 - 4:30 pm: exposing / introducing rhythm-makers
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
         * introduction to making your own makers
 
 * Friday: document structure (publication and more on project layout)
-    * 10:00 - 10:30 am: demo #5
+    * 10:00 - 10:30 am: demo #5 [TBD]
     * 10:30 am - noon:
-        * covers, preface, music
-        * part extraction
+        * part extraction [Josiah]
+        * segment collection [Josiah]
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: whirlwind introduction to latex
+    * 1 - 2:30 pm: whirlwind introduction to latex [Trevor]
+        * covers, preface [Trevor]
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: PDF finalization techniques
+    * 3 - 4:30 pm: PDF finalization techniques [Trevor]
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going futher:
-        * collaborating with other composers
-        * getting the most out of version control
-        * introducting continous integration testing
+        * collaborating with other composers [TBD]
+        * getting the most out of version control [Josiah]
+        * introducting continous integration testing [Josiah]
 
 * Note: talk to Sév about guest appearance
 
