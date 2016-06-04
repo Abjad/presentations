@@ -10,11 +10,12 @@ Abjad bootcamp: schedule
     * 10:30 - noon: LilyPond overview [Trevor]
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: Abjad installation workshop [Josiah+J+T]
+        * introducing Python
         * introducing pip
         * introducing git clone
         * introducing virtualenv (?)
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: notes, rests, chords and lots of them
+    * 3 - 4:30 pm: making notes, rests, chords (and lots of them) in Abjad
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
         * bulleted list of Abjad use cases
@@ -90,6 +91,7 @@ Abjad bootcamp: schedule
         * getting the most out of version control [Josiah]
         * introducting continous integration testing [Josiah]
         * nCoda teaser [Jeff]
+        * introduction to working in a technology company [Trevor+Josiah]
 
 * Note: Author list of course objectives: "At the end of this course,
   participatns will be able to ..." etc.
