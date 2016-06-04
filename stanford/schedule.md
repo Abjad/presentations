@@ -30,13 +30,19 @@ Abjad bootcamp: schedule
     * 3 - 4:30 pm: score structure: solos, duos, quartets, orchestra
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
-        * creating score templates in LilyPond
-        * creating score templates in Abjad 
-        * towards parametric score layout
+        * towards complex score layout
+            * creating score templates in LilyPond
+                * two-staff thing with custom context names for a cello piece
+            * creating score templates in Abjad 
 
 * Wednesday: reproducing a (beautiful & complex) realworld score
     * 10:00 - 10:30 am: demo #3
     * 10:30 am - noon: engraving parametric cello music in LilyPond [Trevor]
+        * grobs, contexts, context settings
+        * three waves of work for attendees:
+            * first: .ly file with all overrides made in-line to note entry
+            * second: \header and \layout externalized in .ly file
+            * third: \header and \layout externalized to stylesheet.ily
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: parametric tutorial workshop 1: typographic overrides [Jeff]
     * 2:30 - 3 pm: snack I
