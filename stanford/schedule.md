@@ -66,23 +66,22 @@ Abjad bootcamp: schedule
         * understanding LilyPond stylesheets
         * understanding relative paths
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: reproducing a complete Abjad score package, part 1
+    * 1 - 2:30 pm: reproducing a complete Abjad score package, part 1 [Josiah]
         * introducing score package commandline tools
         * import class finished at end of previous class
         * making segment packages
         * making material packages
         * making tools
+        * segment collection
     * 2:30 - 3 pm: snack I
     * 3 - 4:30 pm: reproducing a complete Abajd score package, part 2
-        * working in the build directory
-    * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: going further: [???]
+        * working in the Abjad composition and document production workflows
+    * 4:30 - 5 pm: snack II
+    * 5 - 6 pm: going further: part extraction [Josiah]
 
 * Friday: document structure (publication and more on project layout)
     * 10:00 - 10:30 am: demo #5 [???]
-    * 10:30 am - noon:
-        * part extraction [Josiah]
-        * segment collection [Josiah]
+    * 10:30 am - noon: [???}
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: whirlwind introduction to latex [Trevor]
         * covers, preface [Trevor]
