@@ -80,13 +80,12 @@ Abjad bootcamp: schedule
     * 5 - 6 pm: going further: part extraction [Josiah]
 
 * Friday: document structure (publication and more on project layout)
-    * 10:00 - 10:30 am: demo #5 [???]
-    * 10:30 am - noon: [???}
+    * 10:00 - 10:30 am: demo #5: MIDI, SuperCollider & friends [Josiah]
+    * 10:30 am - noon: [???]
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: whirlwind introduction to latex [Trevor]
-        * covers, preface [Trevor]
+    * 1 - 2:30 pm: [???]
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: PDF finalization techniques [Trevor]
+    * 3 - 4:30 pm: [???]
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going futher:
         * getting the most out of version control [Josiah]
