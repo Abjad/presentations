@@ -20,14 +20,18 @@ Abjad bootcamp: schedule
 
 * Tuesday: structuring scores
     * 10:00 - 10:30 am: demo #2 [TBD]
-    * 10:30 am - noon: Engraving a Bach chorale in LilyPond
+    * 10:30 am - noon: Engraving a Bach chorale in LilyPond [Jeff]
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: Abjad containers
+    * 1 - 2:30 pm: rhythms and rhythm-makers [Jeff]
+        * complex rhythms bottom-up in Abjad
+        * complex rhythms with rhythm-makers in Abjad
+    * 2:30 - 3 pm: snack I
+    * 3 - 4:30 pm: going further with Abjad containers [Jeff]
         * voices, staves, staff groups, score
         * indexing and slicing
         * rewriting meter
-    * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: score structure: solos, duos, quartets, orchestra
+        * score structure: solos, duos, quartets, orchestra
+        * introducing selection, inspection, mutation
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
         * towards complex score layout
@@ -59,9 +63,9 @@ Abjad bootcamp: schedule
 
 * Thursday: moving towards makers (or, the joys of encapsulation)
     * 10:00 - 10:30 am: demo #4 [TBD]
-    * 10:30 am - noon: complex rhythms bottom-up in Abjad [Jeff]
+    * 10:30 am - noon: [???]
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: exposing / introducing rhythm-makers [Jeff]
+    * 1 - 2:30 pm: [???]
     * 2:30 - 3 pm: snack I
     * 3 - 4:30 pm: exposing / introducing segment-makers [Josiah]
     * 4:30  - 5 pm: snack II
