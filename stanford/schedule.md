@@ -48,12 +48,13 @@ Abjad bootcamp: schedule
         * redo the morning work in Abjad
     * 2:30 - 3 pm: snack I
     * 3 - 4:30 pm: parametric workshop 2: score package layout [Josiah]
-        * introduction to score package commandline tools
+        * understanding package structure
         * introduction to relative paths
         * including stylesheets inside other stylesheets
-        * demo score that can be taken home for further study
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: going further:
+    * 5 - 6 pm: introducing commandline tools [Josiah]
+        * understanding commandline tools for package structure
+    * 8 pm: evening performance
         * in-class performance from Sév (?) [Séverine]
 
 * Thursday: moving towards makers (or, the joys of encapsulation)
