@@ -16,7 +16,6 @@ Abjad bootcamp: schedule
         * experiment with patterns in nature
         * vary compositional motifs
         * engrave parametric scores
-        * etc
 
 * Tuesday: structuring scores
     * 10:00 - 10:30 am: demo #2 [TBD]
@@ -60,7 +59,7 @@ Abjad bootcamp: schedule
 * Thursday: Abjad score package structure
     * 10:00 - 10:30 am: demo #4 [TBD]
     * 10:30 am - noon: introducing Abjad score package structure [Josiah]
-        * understanding Abajd score package structure
+        * understanding Abajd score package structure (talk thru directories)
         * understanding LilyPond stylesheets
         * understanding relative paths
     * noon - 1 pm: lunch
@@ -82,9 +81,12 @@ Abjad bootcamp: schedule
     * 3 - 4:30 pm: PDF finalization techniques [Trevor]
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going futher:
-        * collaborating with other composers [TBD]
         * getting the most out of version control [Josiah]
         * introducting continous integration testing [Josiah]
+        * nCoda teaser [Jeff]
+
+* Note: Author list of course objectives: "At the end of this course,
+  participatns will be able to ..." etc.
 
 * Note: talk to Sév about guest appearance
 
