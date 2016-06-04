@@ -2,11 +2,17 @@ Abjad bootcamp: schedule
 ========================
 
 * Monday: notes, rests & chords
-    * 9 am - 10 am: introduction (who we are play some music)
-    * 10 am - 10:30 am: LilyPond installation workshop
-    * 10:30 - noon: LilyPond overview
+    * 9 am - 10 am: introduction (who we are play some music) [JJT]
+    * 10 am - 10:30 am: LilyPond installation workshop [Josiah+J+T]
+        * introducing bash
+        * getting to know your text editor
+        * hello world: writing and compliling test.ly
+    * 10:30 - noon: LilyPond overview [Trevor]
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: Abjad installation workshop
+    * 1 - 2:30 pm: Abjad installation workshop [Josiah+J+T]
+        * introducing pip
+        * introducing git clone
+        * introducing virtualenv (?)
     * 2:30 - 3 pm: snack I
     * 3 - 4:30 pm: notes, rests, chords and lots of them
     * 4:30  - 5 pm: snack II
