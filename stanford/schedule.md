@@ -19,7 +19,7 @@ Abjad bootcamp: schedule
         * etc
 
 * Tuesday: structuring scores
-    * 10:00 - 10:30 am: demo #2
+    * 10:00 - 10:30 am: demo #2 [TBD]
     * 10:30 am - noon: Engraving a Bach chorale in LilyPond
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: Abjad containers
@@ -36,7 +36,7 @@ Abjad bootcamp: schedule
             * creating score templates in Abjad 
 
 * Wednesday: reproducing a (beautiful & complex) realworld score
-    * 10:00 - 10:30 am: demo #3
+    * 10:00 - 10:30 am: demo #3 [TBD]
     * 10:30 am - noon: engraving parametric cello music in LilyPond [Trevor]
         * grobs, contexts, context settings
         * three waves of work for attendees:
@@ -44,15 +44,20 @@ Abjad bootcamp: schedule
             * second: \header and \layout externalized in .ly file
             * third: \header and \layout externalized to stylesheet.ily
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: parametric tutorial workshop 1: typographic overrides [Jeff]
+    * 1 - 2:30 pm: parametric workshop 1: parametric cello music in Abjad [TB]
+        * redo the morning work in Abjad
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: parametric tutorial workshop 2: project layout [Josiah]
+    * 3 - 4:30 pm: parametric workshop 2: score package layout [Josiah]
+        * introduction to score package commandline tools
+        * introduction to relative paths
+        * including stylesheets inside other stylesheets
+        * demo score that can be taken home for further study
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
-        * in-class performance from Sév (?)
+        * in-class performance from Sév (?) [Séverine]
 
 * Thursday: moving towards makers (or, the joys of encapsulation)
-    * 10:00 - 10:30 am: demo #4
+    * 10:00 - 10:30 am: demo #4 [TBD]
     * 10:30 am - noon: complex rhythms bottom-up in Abjad [Jeff]
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: exposing / introducing rhythm-makers [Jeff]
