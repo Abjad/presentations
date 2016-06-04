@@ -36,11 +36,11 @@ Abjad bootcamp: schedule
 
 * Wednesday: reproducing a (beautiful & complex) realworld score
     * 10:00 - 10:30 am: demo #3
-    * 10:30 am - noon: engraving parametric cello music in LilyPond
+    * 10:30 am - noon: engraving parametric cello music in LilyPond [Trevor]
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: parametric tutorial workshop 1: project layout
+    * 1 - 2:30 pm: parametric tutorial workshop 1: typographic overrides [Jeff]
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: parametric tutorial workshop 2: typographic overrides
+    * 3 - 4:30 pm: parametric tutorial workshop 2: project layout [Josiah]
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
         * in-class performance from Sév (?)
@@ -51,10 +51,10 @@ Abjad bootcamp: schedule
     * noon - 1 pm: lunch
     * 1 - 2:30 pm: exposing / introducing rhythm-makers [Jeff]
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: exposing / introducing segment-makers
+    * 3 - 4:30 pm: exposing / introducing segment-makers [Josiah]
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
-        * introduction to making your own makers
+        * introduction to making your own makers [Trevor]
 
 * Friday: document structure (publication and more on project layout)
     * 10:00 - 10:30 am: demo #5 [TBD]
