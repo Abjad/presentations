@@ -47,11 +47,11 @@ Abjad bootcamp: schedule
 
 * Thursday: moving towards makers (or, the joys of encapsulation)
     * 10:00 - 10:30 am: demo #4
-    * 10:30 am - noon: exposing / introducing segment-makers
+    * 10:30 am - noon: complex rhythms bottom-up in Abjad [Jeff]
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: complex rhythms bottom-up in Abjad [Jeff]
+    * 1 - 2:30 pm: exposing / introducing rhythm-makers [Jeff]
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: exposing / introducing rhythm-makers
+    * 3 - 4:30 pm: exposing / introducing segment-makers
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further:
         * introduction to making your own makers
