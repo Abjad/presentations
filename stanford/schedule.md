@@ -38,39 +38,37 @@ Abjad bootcamp: schedule
             * creating score templates in LilyPond
                 * two-staff thing with custom context names for a cello piece
             * creating score templates in Abjad 
+        * introduction to making your own makers [Trevor]
 
 * Wednesday: reproducing a (beautiful & complex) realworld score
     * 10:00 - 10:30 am: demo #3 [TBD]
-    * 10:30 am - noon: engraving parametric cello music in LilyPond [Trevor]
+    * 10:30 am - noon: engraving complex cello music in LilyPond [Trevor]
         * grobs, contexts, context settings
         * three waves of work for attendees:
             * first: .ly file with all overrides made in-line to note entry
             * second: \header and \layout externalized in .ly file
             * third: \header and \layout externalized to stylesheet.ily
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: parametric workshop 1: parametric cello music in Abjad [TB]
-        * redo the morning work in Abjad
+    * 1 - 2:30 pm: building complex cello music in Abjad, part 1 [Trevor]
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: parametric workshop 2: score package layout [Josiah]
-        * understanding package structure
-        * introduction to relative paths
-        * including stylesheets inside other stylesheets
+    * 3 - 4:30 pm: building complex cello music in Abjad, part 2 [Trevor]
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: introducing commandline tools [Josiah]
-        * understanding commandline tools for package structure
-    * 8 pm: evening performance
-        * in-class performance from Sév (?) [Séverine]
+    * 5 - 6 pm: going further: [???]
+    * 8 - 8:30 pm: evening performance
+        * Traiettorie inargentate [Séverine]
 
 * Thursday: moving towards makers (or, the joys of encapsulation)
     * 10:00 - 10:30 am: demo #4 [TBD]
-    * 10:30 am - noon: [???]
+    * 10:30 am - noon: introducing Abjad score package structure [Josiah]
+        * understanding Abajd score package structure
+        * understanding LilyPond stylesheets
+        * understanding relative paths
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: [???]
+    * 1 - 2:30 pm: introducing score package commandline tools
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: exposing / introducing segment-makers [Josiah]
+    * 3 - 4:30 pm: [???]
     * 4:30  - 5 pm: snack II
-    * 5 - 6 pm: going further:
-        * introduction to making your own makers [Trevor]
+    * 5 - 6 pm: going further: [???]
 
 * Friday: document structure (publication and more on project layout)
     * 10:00 - 10:30 am: demo #5 [TBD]
