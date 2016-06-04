@@ -57,7 +57,7 @@ Abjad bootcamp: schedule
     * 8 - 8:30 pm: evening performance
         * Traiettorie inargentate [Séverine]
 
-* Thursday: moving towards makers (or, the joys of encapsulation)
+* Thursday: Abjad score package structure
     * 10:00 - 10:30 am: demo #4 [TBD]
     * 10:30 am - noon: introducing Abjad score package structure [Josiah]
         * understanding Abajd score package structure
