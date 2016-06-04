@@ -60,15 +60,21 @@ Abjad bootcamp: schedule
         * Traiettorie inargentate [Séverine]
 
 * Thursday: Abjad score package structure
-    * 10:00 - 10:30 am: demo #4: Abjad + signal processing applications [Jeff]
+    * 10:00 - 10:30 am: demo #4: Score example TBD [Jeff]
     * 10:30 am - noon: introducing Abjad score package structure [Josiah]
         * understanding Abajd score package structure (talk thru directories)
         * understanding LilyPond stylesheets
         * understanding relative paths
     * noon - 1 pm: lunch
-    * 1 - 2:30 pm: introducing score package commandline tools
+    * 1 - 2:30 pm: reproducing a complete Abjad score package, part 1
+        * introducing score package commandline tools
+        * import class finished at end of previous class
+        * making segment packages
+        * making material packages
+        * making tools
     * 2:30 - 3 pm: snack I
-    * 3 - 4:30 pm: [???]
+    * 3 - 4:30 pm: reproducing a complete Abajd score package, part 2
+        * working in the build directory
     * 4:30  - 5 pm: snack II
     * 5 - 6 pm: going further: [???]
 
