@@ -60,7 +60,7 @@ Abjad bootcamp: schedule
         * Traiettorie inargentate [Séverine]
 
 * Thursday: Abjad score package structure
-    * 10:00 - 10:30 am: demo #4: Score example TBD [Jeff]
+    * 10:00 - 10:30 am: demo #4: Automated Piano Performance Data Notation / MIT Exhibit  [Jeff]
     * 10:30 am - noon: introducing Abjad score package structure [Josiah]
         * understanding Abajd score package structure (talk thru directories)
         * understanding LilyPond stylesheets
