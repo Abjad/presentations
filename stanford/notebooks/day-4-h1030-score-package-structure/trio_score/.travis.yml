@@ -1,0 +1,24 @@
+language: python
+
+python:
+    - 2.7
+    - 3.4
+
+before_install:
+    - wget -q http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.19.29-1.linux-64.sh
+    - sudo sh lilypond-2.19.29-1.linux-64.sh --batch
+    - pip install --upgrade pip
+
+install:
+    - pip install --allow-external abjad --allow-unverified abjad -e git://github.com/Abjad/abjad.git#egg=abjad
+    - pip install --allow-external ide --allow-unverified ide -e git://github.com/Abjad/ide.git#egg=ide
+    #- pip install --allow-external library --allow-unverified library -e git://github.com/composer/library.git#egg=library
+    - pip install -e .
+
+script:
+    - ajv doctest -x ./trio_score
+    - py.test -xrf ./trio_score
+    - python ./trio_score/test/test_segments.py
+
+notifications:
+    email: false
