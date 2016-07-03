@@ -1,2 +1,0 @@
-LilyPond Installation
-=====================
