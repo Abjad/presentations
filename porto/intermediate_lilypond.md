@@ -1,4 +1,14 @@
-## Preliminary: The Leaf, Container, Spanner, Indicator Model of a Musical Score
+## Software Preliminaries: Downloads
+### Download LilyPond 
+http://lilypond.org/download.html
+### Follow Command Line Installation Instructions (required for Abjad)
+Windows http://lilypond.org/windows.html
+Mac http://lilypond.org/macos-x.html
+Linux http://lilypond.org/unix.html
+### Download Frescobaldi
+http://frescobaldi.org/download.html
+
+## Conceptual Preliminaries: The Leaf, Container, Spanner, Indicator Model of a Musical Score
 Throughout, we will consider a musical score as a hierarchy of containers http://abjad.mbrsi.org/core_concepts/lcsi.html
 
 ## Review: Basic Leaves
