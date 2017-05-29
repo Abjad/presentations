@@ -1,3 +1,13 @@
+## Preliminary: The Leaf, Container, Spanner, Indicator Model of a Musical Score
+Throughout, we will consider a musical score as a hierarchy of containers http://abjad.mbrsi.org/core_concepts/lcsi.html
+
+## Review: Basic Leaves
+Pitch Entry http://lilypond.org/doc/v2.19/Documentation/notation-big-page.html#pitches
+Rhythm Entry http://lilypond.org/doc/v2.19/Documentation/notation-big-page.html#rhythms
+Chord Entry http://lilypond.org/doc/v2.19/Documentation/learning/combining-notes-into-chords
+Spacer Rests http://lilypond.org/doc/v2.18/Documentation/notation/writing-rests
+
+
 ## Indicators and Spanners in LilyPond
 
 Markup http://lilypond.org/doc/v2.18/Documentation/learning/adding-text
@@ -25,12 +35,18 @@ Piano pedal markings http://lilypond.org/doc/v2.19/Documentation/notation/piano#
 Time Signatures http://lilypond.org/doc/v2.18/Documentation/notation/displaying-rhythms.en.html#time-signature
 
 Lyrics http://lilypond.org/doc/v2.19/Documentation/notation/techniques-specific-to-lyrics
-5 The LCSI model, Containers
 
-#Containers in LilyPond
+## Containers as Contexts in LilyPond
 
+Contexts Listed and Explained http://lilypond.org/doc/v2.18/Documentation/notation/contexts-explained
 
-## Contexts, Engravers, and Overrides in LilyPond
+Voices and Stem Direction http://lilypond.org/doc/v2.19/Documentation/learning/explicitly-instantiating-voices
+
+Bach chorales for engraving practice https://github.com/Abjad/presentations/blob/master/porto/bachChoralesTwoStaves.pdf
+
+An .ly file to get started https://github.com/Abjad/presentations/blob/master/porto/containers.ly
+
+## Contexts, Engravers, and Tweaks in LilyPond
 
 Engravers Explained http://lilypond.org/doc/v2.18/Documentation/learning/engravers-explained
 
@@ -38,3 +54,8 @@ Adding and Removing Engravers http://lilypond.org/doc/v2.19/Documentation/learni
 
 LilyPond Engravers Reference http://lilypond.org/doc/v2.18/Documentation/internals/engravers-and-performers
 
+Introduction to Tweaks http://lilypond.org/doc/v2.19/Documentation/learning/tweaking-methods
+
+The Override Command http://lilypond.org/doc/v2.18/Documentation/notation/the-override-command
+
+So What?: Parametric Cello Example https://github.com/Abjad/intensive/blob/master/day-4/cello-refactored/cello.ly
