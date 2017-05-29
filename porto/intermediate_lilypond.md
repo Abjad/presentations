@@ -3,8 +3,11 @@
 http://lilypond.org/download.html
 ### Follow Command Line Installation Instructions (required for Abjad)
 Windows http://lilypond.org/windows.html
+
 Mac http://lilypond.org/macos-x.html
+
 Linux http://lilypond.org/unix.html
+
 ### Download Frescobaldi
 http://frescobaldi.org/download.html
 
@@ -13,8 +16,11 @@ Throughout, we will consider a musical score as a hierarchy of containers http:/
 
 ## Review: Basic Leaves
 Pitch Entry http://lilypond.org/doc/v2.19/Documentation/notation-big-page.html#pitches
+
 Rhythm Entry http://lilypond.org/doc/v2.19/Documentation/notation-big-page.html#rhythms
+
 Chord Entry http://lilypond.org/doc/v2.19/Documentation/learning/combining-notes-into-chords
+
 Spacer Rests http://lilypond.org/doc/v2.18/Documentation/notation/writing-rests
 
 
