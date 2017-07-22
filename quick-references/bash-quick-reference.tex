@@ -1,0 +1,261 @@
+\documentclass[a4paper]{tufte-handout}
+
+\newcommand{\headerLeft}{\textsc{Abjad/CCRMA}}
+\newcommand{\headerCenter}{\textsc{Bash Quick Reference}}
+\newcommand{\headerRight}{\textsc{August $|$ 2017}}
+
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{lab_notes}
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+\usepackage{minted}
+\usemintedstyle{bw}
+\setminted{%
+    autogobble=true,
+    fontsize=\small,
+}
+
+\title{Bash Quick Reference}
+\date{2017}
+
+\begin{document}
+\maketitle
+
+\section{Path parts in a Unix-like system}
+
+\begin{description}
+    \item [\texttt{.}]
+        \hfill The current directory
+    \item [\texttt{..}]
+        \hfill The parent directory
+    \item [\texttt{/}]
+        \footnote{On Windows: \texttt{\textbackslash}}
+        \hfill The directory \enquote{separator}
+    \item [\textasciitilde]
+        \hfill Your \enquote{home} directory
+    \item [\texttt{*}] \hfill A wildcard, matching part of a path \end{description}
+
+\hrulefill{}
+
+\section{Navigating directories}
+
+\begin{description}
+    \item [\texttt{pwd}]
+        \footnote{On Windows: \texttt{chdir}}
+        \hfill Print the current directory
+    \item [\texttt{ls}]
+        \footnote{On Windows: \texttt{dir} or \texttt{tree}}
+        \hfill List information about files and directories
+        \begin{minted}{bash}
+        $ ls              # list the current directory's contents
+        $ ls -l           # list with extra information
+        $ ls -a           # list hidden files too
+        $ ls *.txt        # list files ending with .txt
+        $ ls ~/../*.txt   # list files ending with .txt in the parent of your home folder
+        \end{minted}
+    \item [\texttt{cd}]
+        \footnote{Same on Windows}
+        \hfill Change the current directory
+        \begin{minted}{bash}
+        $ cd foo          # change to the foo/ directory in the current directory
+        $ cd /foo         # change to the root /foo directory
+        $ cd ~            # change to your home directory
+        $ cd              # (also) change to your home directory
+        $ cd ..           # go up one directory level
+        \end{minted}
+\end{description}
+
+\hrulefill{}
+
+\section{Getting help}
+
+Most command-line programs will print out help information when invoked without
+arguments. To get help explicitly, or to get more extensive output, try the
+following:
+
+\begin{description}
+    \item [\texttt{<command> -h}]
+        \hfill Display a help message about a command
+    \item [\texttt{<command> -{}-help}]
+        \hfill
+    \item [\texttt{<command> help}]
+        \hfill
+    \item [\texttt{man <command>}]
+        \footnote{On Windows: \texttt{help}}
+        \hfill Help manual
+\end{description}
+
+\hrulefill{}
+
+\section{Printing and deleting}
+
+\begin{description}
+    \item [\texttt{echo}]
+        \footnote{Same on Windows}
+        \hfill Print a message
+        \begin{minted}{bash}
+        $ echo "Hello, world!"
+        $ echo "Hello, world!" > hello.txt
+        $ echo "Hello, again!" >> hello.txt
+        \end{minted}
+    \item [\texttt{clear}]
+        \footnote{On Windows: \texttt{cls}}
+        \hfill Clear the terminal screen
+\end{description}
+
+\hrulefill{}
+
+\section{Making, moving, copying}
+
+\begin{description}
+    \item [\texttt{mkdir}]
+        \footnote{Same on Windows}
+        \hfill Create a directory
+        \begin{minted}{bash}
+        $ mkdir foo
+        $ mkdir foo/bar
+        $ mkdir -p one/two/three
+        \end{minted}
+    \item [\texttt{mv}]\footnote{
+        The Unix \texttt{mv} command both renames files and changes their
+        location. On Windows, \texttt{move} will move a file to a different
+        directory, but \texttt{ren} will change it's name and or directory.}
+        \hfill Rename a file or directory
+        \begin{minted}{bash}
+        $ mv old-name.txt new-name.txt
+        $ mv source.txt target/
+        \end{minted}
+    \item [\texttt{cp}]
+        \footnote{On Windows: \texttt{copy} or \texttt{xcopy}}
+        \hfill Copy a file or directory
+        \begin{minted}{bash}
+        $ cp source.txt target.txt
+        $ cp -R source/ target
+        \end{minted}
+    \item [\texttt{touch}]
+        \hfill Create an empty file \\
+        \hfill Or update the timestamp of an existing file
+\end{description}
+
+\hrulefill{}
+
+\section{Editing and opening}
+
+\begin{description}
+    \item [\texttt{nano}]
+        \footnote{Not available on Windows, but try \texttt{edit}}
+        \hfill A minimal text editor
+    \item [\texttt{vim}]
+        \hfill A \enquote{programmer's} text editor
+    \item [\texttt{open}]
+        \footnote{On Windows: \texttt{start}.
+        Some Linux systems use \texttt{xdg-open} instead.}
+        \hfill Open a file in its default application
+\end{description}
+
+\hrulefill{}
+
+\section{Deleting}
+
+\begin{description}
+    \item [\texttt{rmdir}]
+        \footnote{Same on Windows}
+        \hfill Remove folder(s)
+    \item [\texttt{rm}]
+        \footnote{On Windows: \texttt{del}}
+        \footnote{Be careful! This command removes files and directories
+        permanently. And combining the \texttt{-R} and \texttt{-f} flags can
+        delete many files at once.}
+        \hfill Remove file(s)
+        \begin{minted}{bash}
+        $ rm delete-me.txt
+        $ rm -R delete-me/  # be careful!
+        \end{minted}
+\end{description}
+
+\hrulefill{}
+
+\section{Reading files}
+
+\begin{description}
+    \item [\texttt{cat}]
+        \footnote{On Windows: \texttt{type}}
+        \hfill Print file contents
+    \item [\texttt{head}]
+        \hfill Print the beginning of file(s)
+    \item [\texttt{tail}]
+        \hfill Print the end of file(s)
+    \item[\texttt{less}]
+        \footnote{On Windows: \texttt{more}}
+        \hfill Display output one screen at a time
+\end{description}
+
+\hrulefill{}
+
+\section{Searching and sorting}
+
+\begin{description}
+    \item [\texttt{which}]
+        \hfill Search the user's \texttt{\$PATH} for a program file
+        \begin{minted}{bash}
+        $ which lilypond
+        \end{minted}
+    \item [\texttt{sort}]
+        \footnote{Same on Windows}
+        \hfill Sort lines
+        \begin{minted}{bash}
+        $ echo -e "one\ntwo\nthree" > lines.txt
+        $ cat lines.txt
+        $ cat lines.txt | sort
+        \end{minted}
+    \item [\texttt{grep}]
+        \footnote{On Windows: \texttt{find}}
+        \hfill Search files for lines that match a pattern
+        \begin{minted}{bash}
+        $ echo -e "one\ntwo\nthree" > lines.txt
+        $ cat lines.txt | grep t
+        \end{minted}
+    \item [\texttt{ack}]
+        \hfill Like \texttt{grep}, but nicer
+    \item [\texttt{find}]
+        \footnote{The single quotes around \texttt{*{}.txt} prevent Bash from
+        prematurely expanding the \emph{pattern} into multiple file names.}
+        \hfill Search for files that meet a desired criteria
+        \begin{minted}{bash}
+        $ find . -name '*.txt'
+        \end{minted}
+\end{description}
+
+\hrulefill{}
+
+\section{Permissions}
+
+\begin{description}
+    \item [\texttt{sudo}]
+        \hfill Execute a command as another user
+    \item [\texttt{chown}]
+        \hfill Change file owner and group
+    \item [\texttt{chmod}]
+        \hfill Change access permissions
+\end{description}
+
+\hrulefill{}
+
+\section{Glue}
+
+\begin{description}
+    \item [\texttt{CMD1 | CMD2}]
+        \hfill Send output from one command to another
+    \item [\texttt{CMD > file}]
+        \hfill Write the output of a command to a file
+    \item [\texttt{CMD >{}> file}]
+        \hfill \emph{Append} the output of a command to a file
+    \item [\texttt{\$VARIABLE}]
+        \hfill Bash variables start with \texttt{\$}
+    \item [\texttt{'...'} vs \texttt{"..."}]
+        \hfill Bash treats single and double quotes different!
+\end{description}
+
+\end{document}

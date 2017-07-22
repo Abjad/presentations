@@ -1,0 +1,175 @@
+\PassOptionsToPackage{scaled=.75}{beramono}
+\documentclass[a4paper]{tufte-handout}
+
+\newenvironment{abjadbookoutput}{}{}
+
+\newcommand{\headerLeft}{\textsc{Abjad/CCRMA}}
+\newcommand{\headerCenter}{\textsc{Abjad Quick Reference}}
+\newcommand{\headerRight}{\textsc{August $|$ 2017}}
+
+\usepackage[export]{adjustbox}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{lab_notes}
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+\usepackage{minted}
+\usemintedstyle{bw}
+\setminted{%
+    autogobble=true,
+    fontsize=\small,
+}
+
+\title{Abjad Quick Reference}
+\date{2017}
+
+\begin{document}
+\maketitle
+
+\section{Duration primitives}
+
+\begin{description}
+    \item[Pairs:]
+        \hfill \verb|(3, 8)|
+    \item[Durations:]
+        \hfill \verb|abjad.Duration(3, 8)|
+    \item[Offsets:]
+        \hfill \verb|abjad.Offset(1, 2)|
+    \item[Multipliers:]
+        \hfill \verb|abjad.Multiplier(5, 7)|
+\end{description}
+
+\section{Pitch primitives}
+
+\begin{description}
+    \item[Integers and \enquote{floats}:]
+        \hfill \verb|3|
+    \item[Strings:]\footnote{%
+        Lower-case pitch strings use LilyPond's syntax, while upper-case pitch
+        strings --- e.g \texttt{C\#5}, \texttt{Db3} --- use American pitch-class
+        syntax.}
+        \hfill \verb|"cs''"| \emph{or} \verb|"dqs'"| \emph{or} \verb|"C\#5"|
+    \item[Named pitches:]\footnote{%
+        Named pitch objects can be instantiated from integers or floats
+        representing numbered pitches, from any of the string variations, or
+        from other pitch objects.}
+        \hfill \verb|abjad.NamedPitch("d'")|
+\end{description}
+
+\section{Leaves}
+
+\begin{description}
+    \item[Notes:]\footnote{%
+        All leaves can be instantiated from LilyPond strings,
+        from valid duration and pitch inputs as described above, or from other
+        leaf instances.}
+        \hfill \verb|abjad.Note("c'4")|
+    \item[Rests:]
+        \hfill \verb|abjad.Rest((1, 4))|
+    \item[Chords:]
+        \hfill \verb|abjad.Chord((0, 1, 4), Duration(1, 4))|
+    \item[Skips:]
+        \hfill \verb|abjad.Skip(Duration(1, 4))|
+    \item[Multimeasure rests:]
+        \hfill \verb|abjad.MultimeasureRest(1)|
+\end{description}
+
+\section{Non-context Containers}
+
+\begin{description}
+    \item[\enquote{Bare} containers:]\footnote{%
+        All containers can be instantiated from LilyPond strings, or from lists
+        of Abjad components.}
+        \hfill \verb|abjad.Container("c'4 d'4 e'4 f'4")|
+    \item[Measures:]
+        \hfill \verb|abjad.Measure((3, 4), [Note("c2.")])|
+    \item[Tuplets:]
+        \hfill \verb|abjad.Tuplet((2, 3), "c'8 d'8 e'8")|
+\end{description}
+
+\section{Contexts}
+
+\begin{description}
+    \item[Voices:]
+        \hfill \verb|abjad.Voice("c'4 d'4 e'4 f'4")|
+    \item[Staves:]
+        \hfill \verb|abjad.Staff("c'4 d'4 e'4 f'4")|
+    \item[Staff groups:]
+        \hfill \verb|abjad.StaffGroup([staff_one, staff_two])|
+    \item[Scores:]
+        \hfill \verb|abjad.Score([staff_group])|
+    \item[Generic contexts:]
+        \hfill \verb|abjad.Context(..., context_name='FooStaff')|
+\end{description}
+
+\section{Non-scoped indicators}
+
+\begin{description}
+    \item[Articulations:]
+        \hfill \verb|abjad.Articulation('staccato')|
+    \item[Markup:]
+        \hfill \verb|abjad.Markup("honk car horn now")|
+\end{description}
+
+\section{Indicators}
+
+\begin{description}
+    \item[Clefs:]
+        \hfill \verb|abjad.Clef('bass')|
+    \item[Dynamics:]
+        \hfill \verb|abjad.Dynamic('f')|
+    \item[Key signatures:]
+        \hfill \verb|abjad.KeySignature('c', 'minor')|
+    \item[Metronome marks:]
+        \hfill \verb|abjad.MetronomeMark((1, 4), 60)|
+    \item[Time signatures:]
+        \hfill \verb|abjad.TimeSignature((6, 8))|
+\end{description}
+
+\section{Spanners}
+
+\begin{description}
+    \item[Beams:]
+        \hfill \verb|abjad.Beam()|
+    \item[Slurs:]
+        \hfill \verb|abjad.Slur()|
+    \item[Glissandi:]
+        \hfill \verb|abjad.Glissando()|
+    \item[Hairpins:]
+        \hfill \verb|abjad.Hairpin('p < f')|
+\end{description}
+
+\section{Simple verbs}
+
+\begin{description}
+    \item[Formatting:]
+        \hfill \verb|format(object)|
+    \item[Illustrating:]
+        \hfill \verb|abjad.show(component)|
+    \item[Playing:]
+        \hfill \verb|abjad.play(component)|
+    \item[Attaching:]\footnote{%
+        Use \texttt{attach()} to attach an indicator to a single leaf, or a
+        spanner to one or more leaves. Use \texttt{detach()} to remove an
+        indicator from a leaf. Some spanners have specific requirements about
+        how many and what kinds of leaves they can attach to.}
+        \hfill \verb|abjad.attach(indicator, component)|
+    \item[Templating:]
+        \hfill \verb|abjad.new(object, key1=value1, key2=value2)|
+\end{description}
+
+\section{Complex verbs}
+
+\begin{description}
+    \item[Selecting:]
+        \hfill \verb|abjad.select(component).by_<query>()|
+    \item[Inspecting:]
+        \hfill \verb|abjad.inspect(component).get_<property>()|
+    \item[Typesetting:]
+        \hfill \verb|abjad.override(...).<grob_name>.<property> = ...|
+    \item[Mutating:]
+        \hfill \verb|abjad.mutate(component).<do_something>()|
+\end{description}
+
+\end{document}

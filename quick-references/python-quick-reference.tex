@@ -1,0 +1,114 @@
+\documentclass[a4paper]{tufte-handout}
+
+\newenvironment{abjadbookoutput}{}{}
+
+\newcommand{\headerLeft}{\textsc{Abjad/CCRMA}}
+\newcommand{\headerCenter}{\textsc{Python Quick Reference}}
+\newcommand{\headerRight}{\textsc{August $|$ 2017}}
+
+\usepackage[export]{adjustbox}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{lab_notes}
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+\usepackage{minted}
+\usemintedstyle{bw}
+\setminted{%
+    autogobble=true,
+    fontsize=\small,
+    frame=leftline,
+    framerule=0.5pt,
+    framesep=6pt,
+    obeytabs=true,
+    tabsize=4,
+    xleftmargin=-6pt,
+}
+
+\title{Python Quick Reference}
+\date{2017}
+
+\begin{document}
+\maketitle
+
+\section{Invocation}
+
+\begin{description}
+    \item [Start the interpreter:]
+        \hfill \verb|python|
+    \item [Run a command and exit:]
+        \hfill \verb|python -c "print('hello!')"|
+    \item [Interpret a file:]
+        \hfill \verb|python my-file.py|
+\end{description}
+
+\section{Some basics}
+
+\begin{description}
+    \item [Print:]
+        \hfill \verb|print('this is a string')|
+    \item [Inspect objects:]
+        \hfill \verb|dir(my_object)|
+    \item [Get help:]
+        \hfill \verb|help(my_object)|
+    \item [Quit Python:]
+        \hfill \verb|quit()|
+\end{description}
+
+\section{Arithmetic}
+
+    \begin{multicols}{2}
+
+        Math works like you expect.
+
+        \begin{comment}
+        <abjad>
+        2 * 3 + 1
+        </abjad>
+        \end{comment}
+
+        \begin{abjadbookoutput}
+        \hfill
+        \begin{minted}{python}
+        >>> 2 * 3 + 1
+        7
+        \end{minted}
+        \end{abjadbookoutput}
+
+    \end{multicols}
+
+    \begin{multicols}{2}
+
+        Precedence matters. \\
+        Use parens to group.
+
+        \begin{comment}
+        <abjad>
+        2 * (3 + 1)
+        </abjad>
+        \end{comment}
+
+        \begin{abjadbookoutput}
+        \hfill
+        \begin{minted}{python}
+        >>> 2 * (3 + 1)
+        8
+        \end{minted}
+        \end{abjadbookoutput}
+
+    \end{multicols}
+
+\section{Control Flow}
+
+\section{Sequences}
+
+\section{Dictionaries}
+
+\section{Imports}
+
+\section{Functions}
+
+\section{Classes}
+
+\end{document}
