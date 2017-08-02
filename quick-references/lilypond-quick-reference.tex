@@ -1,0 +1,700 @@
+\documentclass[a4paper]{tufte-handout}
+
+\newenvironment{abjadbookoutput}{}{}
+
+\newcommand{\headerLeft}{\textsc{Abjad/CCRMA}}
+\newcommand{\headerCenter}{\textsc{LilyPond Quick Reference}}
+\newcommand{\headerRight}{\textsc{August $|$ 2017}}
+
+\usepackage[export]{adjustbox}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{lab_notes}
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+\usepackage{minted}
+\usemintedstyle{bw}
+\setminted{%
+    autogobble=true,
+    fontsize=\small,
+}
+
+\title{LilyPond Quick Reference}
+\date{2017}
+
+\begin{document}
+\maketitle
+
+\section{Invocation}
+
+LilyPond is a command-line tool, and it must be run from inside your computer's
+\emph{terminal}.
+
+\begin{description}
+    \item [Compile one file:]
+        \hfill \verb|lilypond my-file.ly|
+    \item [Compile multiple files:]
+        \hfill \verb|lilypond one.ly two.ly three.ly|
+    \item [Get help:]
+        \hfill \verb|lilypond --help|
+    \item [Print LilyPond's version:]
+        \hfill \verb|lilypond --version|
+    \item [Choose where the output goes:]
+        \hfill \verb|lilypond -o out.pdf in.ly|
+\end{description}
+
+\hrulefill{}
+
+\section{General Syntax}
+
+\begin{description}
+    \item [Functions and variables:]
+        \footnote{When referencing a previously defined function or variable
+        in LilyPond, preceed the name with a slash. This syntax style is taken
+        from \LaTeX, a \enquote{what-you-see-is-what-you-mean} typesetting
+        program that inspired the original LilyPond developers.}
+        \hfill \verb|\xxxx|
+
+    \item [Code blocks:]
+        \hfill \verb|{ ... }|
+
+    \item [Variable assignment:]
+        \hfill \verb|var = { ... }|
+
+    \item [Line comment:]
+        \hfill \begin{minted}{text}
+        % this is a line comment
+        \end{minted}
+
+    \item [Block comment:]
+        \hfill \begin{minted}{text}
+        %{
+            this is a multi-line
+            block comment
+        %}
+        \end{minted}
+
+    \item [Post-events:]
+        \footnote{\enquote{Post-events} include any commands following a note
+        definition that are pertinent to that note, including articulations,
+        markup, and starting or stopping \enquote{spanners} such as beams,
+        slurs and glissandi.}
+        \hfill \verb|c\foo|
+
+    \item [Directions:]
+        \hfill \verb|c^"up" c_"down" c-"center"|
+
+    \item [Scheme lists, pairs, booleans and symbols:]\footnote{
+        LilyPond embeds \emph{another} programming language, called
+        \enquote{Scheme}, for advanced control over typography and typesetting
+        behavior. Scheme is a variant of Lisp. LilyPond uses the \texttt{\#}
+        character to indicate when the syntax is changing from LilyPond's
+        native syntax into Scheme.}
+        \hfill \begin{minted}{text}
+        #'(1 2 3)  % a Scheme list of three numbers
+        #'(X . Y)  % a Scheme pair of the variable X and Y
+        ##t ##f    % booleans
+        #'symbol   % a symbol
+        \end{minted}
+
+    \item[Includes:]
+        \hfill \verb|\include "another-file.ly"|
+
+    \item[Version:]\footnote{
+        Every \emph{top-level} LilyPond file you compile should start with a
+        version command, otherwise LilyPond will complain.}
+        \hfill \verb|\version "2.19.0"|
+
+\end{description}
+
+\hrulefill{}
+
+\pagebreak
+
+\section{Common Notation}
+
+\begin{description}
+    \item[Input language:]
+        \hfill \verb|\language "english"|
+
+    \item[Note names:]\footnote{%
+        LilyPond's original developers were from the Netherlands, so notes use
+        the Dutch spelling by default. Abjad's developers studied music
+        primarily in the United States, so we use the English spellings
+        instead. LilyPond supports many international spellings.}
+        \footnote{The octave indications are missing in the input for this example.}
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            c d e f g a b
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { c' d' e' f' g' a' b'}
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-795ec185ffbc4b4d5f499935543ef898.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Alterations:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            cs bf as css bff b b! b?
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { cs' bf as css' bff b b! b? }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-1b7ff09badb002a5112dd216810c39fa.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Octaves:]\footnote{%
+        LilyPond uses European octave tick notation.}
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \raggedcolumns
+            \interlinepenalty=10000
+
+            \begin{minted}{text}
+            c,,, c,, c, c c' c'' c'''
+            \end{minted}
+
+            \vfill \null \columnbreak
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            {
+                \clef "bass_15" c,,, c,,
+                \clef "bass" c, c
+                \clef "treble" c' c'' c'''
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-a685e7de7e2c87ec41700cf7ee6d8032.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Durations:]\footnote{%
+        LilyPond allows users to omit durations when entering notes. The last
+        entered duration will be used for the current note. Abjad \emph{always}
+        prints the duration of every note.}
+        \hfill \vspace{-0.5\baselineskip} \\
+
+        \begin{minted}{text}
+        g1 g2 g4 g8 g16 g4. g4.. g4...
+        \end{minted}
+
+        \begin{comment}
+        <lilypond>stylesheet=stylesheet-minimal.ily]
+        { g1 g2 g4 g8 g16 g4. g4.. g4... }
+        </lilypond>
+        \end{comment}
+
+        \begin{abjadbookoutput}
+        \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-5807f7e3cf33e90264001261c9e1cd33.pdf}
+        \end{abjadbookoutput}
+
+    \item[Chords:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            <c' e' g'>4 <f' c''>4 <d' df'' ds''>4
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { <c' e' g'>4 <f' c''>4 <d' df'' ds''>4 }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-3c02d0230f6bc52f81cf653cb71bb0ca.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Rests and skips:]\footnote{%
+        Typographic \emph{skips} take up musical time but do not have any
+        graphic representation. They're typically used for positioning
+        notational elements - e.g. intermittent voices - relative to each
+        other.}
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            r2 r4 r4.. r16 s4 r4
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { r2 r4 r4.. r16 s4 r4 }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-c4434b8378b7e4a45a4a6df1ba4a658f.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Ties:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            c'4 ~ c' c'2 ~ c'4 <c' a' f''> ~ c'
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { c'4 ~ c' c'2 ~ c'4 <c' a' f''> ~ c' }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-38362ff0acd48b8d15197392d9c67f2f.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Beams:]\footnote{%
+        LilyPond applies beams automatically unless you tell it otherwise.}
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            g8 g8 g8 [ g g ] g8 [ g16 g16 ]
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { g8 [ g8 ] g8 [ g g ] g8 [ g16 g16 ] }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-c1e7ec324e5f97edd0d5595fde8c0770.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Clefs:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            \clef "treble" \clef "bass"
+            \clef "tenor" \clef "treble_8"
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            {
+                \clef "treble" c'4
+                \clef "bass" c'4
+                \clef "tenor" c'4
+                \clef "treble_8" c'4
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-aa6657f9e5267ee3ee338fca4e0ce481.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Time signatures:]\footnote{%
+        LilyPond doesn't model measures like other notation software. Measures
+        are not containers, and notes, time signatures and bar lines are drawn
+        independently of one another.}
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            \time 4/4 \time 2/2
+            \time 3/4 \time 3/8
+            \time 7/10
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>
+            \new Staff \with {
+                \override BarLine.stencil = ##f
+            } {
+                \time 4/4 s4
+                \time 2/2 s4
+                \time 3/4 s4
+                \time 3/8 s4
+                \time 7/10 s4
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-825b466a0dc7d15cc9c11f24cba7e722.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Key signatures:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            \key c \minor
+            \key c \major
+            \key b \dorian
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            {
+                \key c \minor s4
+                \key c \major s4
+                \key b \dorian s4
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-ffb3953922380af38c317c2b8d961ed8.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Slurs and phrasing slurs:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            c' ( a' ) c' \( b ( a ) g f \)
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { c' ( a ) c' \( b ( a ) g f \) }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-352de17d220fcaf4e3b634c9298604da.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Dynamics, hairpins, etc.:]\footnote{%
+        Crescendi and decrescendi will span over music until they encounter
+        another dynamic event. Use \texttt{\textbackslash!} to terminate a
+        dynamic line without the use of final dynamic.}
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            g' \p \< a' b' c'' \f \> d'' e'' \!
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { g' \p \< a' b' c'' \f \> d'' e'' \! }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-a0bbf97c84883271e5d0197ffc052d37.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Articulations and text markup:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            c'4 -> c' -. c' ^| c' ^- _+
+            c' \trill c' _\markup{ \flat }
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            {
+                c'4 -> c' -. c' ^! c' ^- _+
+                c' \trill c' _\markup{ \flat }
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-d721485faa4be66ceab18c2576c91b92.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Glissandi:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            c' \glissando g' \glissando d'
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            { c' \glissando g' \glissando d' }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-cdd403f63054a6908460d75688152887.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Triplets and tuplets]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            \times 2/3 { c'4 d' e' }
+            \times 4/5 { c' d' e' f' g' }
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            {
+                \times 2/3 { c'4 d' e' }
+                \times 4/5 { c' d' e' f' g' }
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-6cedfc123da46112107e50e71783a040.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Parallel music:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            << { a'2 c''4 a' } \\ { f'4 g'4 f'2 } >>
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            << { a'2 c''4 a' } \\ { f'4 g'4 f'2 } >>
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-55e935e948e6083878fa8b7c74a48082.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Metronome and rehearsal marks:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            \tempo "Adagio" 4=60 c'2 c' c'
+            \mark \default c' \mark "X"
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>
+            {
+                \tempo "Adagio" 4=60 c'2 c' c'
+                \mark \default c' \mark "X"
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-e2dbe9f0a0991e43b854088ad67b253c.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \pagebreak
+
+    \item[Partial measures, bar line checks, bar lines:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            \time 2/4
+            \partial 8 c'8 | c'2 | c'
+            \bar "||" c' \bar "|."
+            \end{minted}
+            \vfill\null \columnbreak
+
+            \begin{comment}
+            <lilypond>
+            {
+                \partial 8 c'8 | c'2 | c'
+                \bar "||" c' \bar "|."
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-c194b50e2d37809cf764705e7a4fe7df.pdf}
+            \end{abjadbookoutput}
+
+            \hfill
+        \end{multicols}
+
+    \item[Repeats:]
+        \hfill \vspace{-0.5\baselineskip} \\
+
+        \begin{minted}{text}
+        \time 2/4
+        c'2 \repeat volta 2 { d' }
+        \alternative { { e' } { f' } } g'
+        \end{minted}
+
+        \begin{comment}
+        <lilypond>
+        {
+            \time 2/4
+            c'2 \repeat volta 2 { d' }
+            \alternative { { e' } { f' } } g'
+        }
+        </lilypond>
+        \end{comment}
+
+        \begin{abjadbookoutput}
+        \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-e557790dad972e809923a1fb8d43457e.pdf}
+        \end{abjadbookoutput}
+
+    \item[Grace notes:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            \grace d'8 c'4
+            \appoggiatura d'8 c'4
+            \acciaccatura d'8 c'4
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>
+            {
+                \grace d'8 c'4
+                \appoggiatura d'8 c'4
+                \acciaccatura d'8 c'4
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-d9a98a62b89a1c0aa280bba45e3de8f4.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+    \item[Full/Multi-measure rests:]
+        \hfill \vspace{-0.5\baselineskip} \\
+
+        \begin{minted}{text}
+        R1 | R1 * 3 | \time 3/4 R2. * 4
+        \end{minted}
+
+        \begin{comment}
+        <lilypond>
+        {
+            R1 | R1 * 3 | \time 3/4 R2. * 4
+        }
+        </lilypond>
+        \end{comment}
+
+        \begin{abjadbookoutput}
+        \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-997b86f1b2e6999a00de261e7d942b05.pdf}
+        \end{abjadbookoutput}
+
+    \item[Typographic overrides:]
+        \hfill \vspace{-\baselineskip} \\
+        \begin{multicols}{2}
+
+            \begin{minted}{text}
+            c'8 [ d'
+            \override NoteHead.style = #'cross e' f'
+            \once \override NoteHead.style = #'harmonic g'
+            a' \revert NoteHead.style b' c'' ]
+            \end{minted}
+
+            \begin{comment}
+            <lilypond>[stylesheet=stylesheet-minimal.ily]
+            \new Staff {
+                c'8 [ d'
+                \override NoteHead.style = #'cross e' f'
+                \once \override NoteHead.style = #'harmonic g'
+                a' \revert NoteHead.style b' c'' ]
+            }
+            </lilypond>
+            \end{comment}
+
+            \begin{abjadbookoutput}
+            \noindent\includegraphics[max width=\linewidth, right,]{assets/lilypond-9cb24b4a763563e71705255aba542a41.pdf}
+            \end{abjadbookoutput}
+
+        \end{multicols}
+
+\end{description}
+
+\hrulefill{}
+
+\section{Nested Contexts}
+
+LilyPond can \enquote{nest} musical containers --- called
+\enquote{contexts}\footnote{%
+LilyPond provides a variety of different common
+contexts out of the box which handle many compositional use-cases, and allows
+users to define their own. Custom contexts can express their own typographic
+styles, e.g.\ smaller musical fonts for cue voices, or drastic graphical
+changes to create graphic notation. Contexts can also be \enquote{named}, which
+supports LilyPond's context concatenation behavior. } --- together to create
+examples of parallel music. The following example creates the structure
+necessary to typeset a typical Bach chorale:
+
+\begin{minted}{text}
+\new Score <<
+    \new ChoirStaff <<
+        \new Staff = "Upper" <<
+            \clef "treble"
+            \new Voice = "Soprano" { \voiceOne c''2 d''2 }
+            \new Voice = "Alto" { \voiceTwo c'2 d'2 }
+        >>
+        \new Staff = "Lower" <<
+            \clef "bass"
+            \new Voice = "Tenor" { \voiceOne c2 d2 }
+            \new Voice = "Bass" { \voiceTwo c,2 d,2 }
+        >>
+    >>
+>>
+\end{minted}
+
+\end{document}
